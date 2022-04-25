@@ -33,7 +33,7 @@ body {
     text-align: justify;
     padding: 10px 10px 10px 10px;
     align-content: center;
-    padding-top: 15rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
     /* Footer height */
 }
@@ -45,7 +45,7 @@ header {
     text-align: center;
     background-color: var(--grey);
     color: var(--white);
-    height: 15rem;
+    height: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,12 +73,12 @@ section {
     border-radius: 20px;
 }
 
-.card-image{
+.card-image {
     height: 300px;
     width: 100%;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,7 +89,8 @@ section {
     padding: 10px 10px 10px 10px;
 }
 
-.card p, .card a {
+.card p,
+.card a {
     color: var(--black);
 }
 
@@ -98,6 +99,7 @@ section {
 }
 
 .content-aligment {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,23 +107,28 @@ section {
 }
 
 ul {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-left: 0;
     list-style-type: none;
     /* margin: 0; */
     /* padding: 0; */
-    margin-top: 50px;
+    margin: auto;
     overflow: hidden;
-    background-color: var(--robin-egg-blues);
+    /*background-color: var(--robin-egg-blues);*/
 }
 
 ul li {
-    float: left;
+    
+    width: 270px;
 }
 
 ul li a {
     display: block;
     color: var(--white);
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px;
     text-decoration: none;
     line-height: 25px;
     background-color: #008554;
@@ -145,19 +152,53 @@ ul li a.active:hover {
     background-color: var(--dark-green);
 }
 
-ul li.right {
-    float: right;
-}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-ul li a.logo {
-    font-size: 25px;
-    font-weight: 800;
-    font-family: Poppins;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-align: center;
     color: var(--light-green);
+}
+
+h1{
+    font-size: 44px;
+}
+
+h2{
+    font-size: 22px;
+}
+
+h3{
+    font-size: 11px;
+}
+
+h4{
+    font-size: 5.5px;
+}
+
+h5{
+    font-size: 2.75px;
+}
+
+h6{
+    font-size: 1.375px;
 }
 
 a {
@@ -169,12 +210,100 @@ strong {
 }
 
 p {
-    text-indent: 4em;
+    text-indent: 25px;
+    padding-left: 50px;;
+    padding-right: 50px;;
+    text-align: justify;
+    text-justify: distribute-all-lines;
     color: var(--white);
 }
 
 hr {
     background-color: var(--black);
+}
+
+.vertical-menu {
+    width: 50%;
+}
+
+.vertical-menu a {
+    display: block;
+    color: var(--white);
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+    text-decoration: none;
+    line-height: 25px;
+    background-color: #008554;
+    border-style: solid;
+    border-color: var(--grey);
+    border-width: 1px 0.2px 1px 0.2px;
+    transition: background-color 0.5s;
+    font-family: Poppins;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.horario-table{
+    margin: 0 auto;
+}
+
+.horario-table tr th {
+
+    height: 25px;
+    padding: 25px 60px;
+    font-size: 13.5px;
+}
+
+.horario-table tr td {
+    position: relative;
+    padding: 25px 60px;
+    font-size: 13.5px;
+    height: 50px;
+}
+
+.inside-table {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    white-space: normal;
+}
+
+.r1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 100%;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #7F7F7F;
+}
+
+.r2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+}
+
+.scroll {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: block;
 }
 
 /* Circle image */
@@ -195,7 +324,9 @@ hr {
     height: auto;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 0.5px solid;
     border-collapse: collapse;
     text-align: center;
@@ -210,23 +341,23 @@ table>caption {
     font-weight: bold
 }
 
-.back-button{
+.back-button {
     position: absolute;
     left: 0;
     margin-left: 10px;
-    height: 50px; 
+    height: 50px;
     width: 50px;
 }
 
 .back-button:hover {
     opacity: 0.8;
-  }
+}
 
 
 
-.back-button > svg > path {
-        fill: var(--light-green);
-    }
+.back-button>svg>path {
+    fill: var(--light-green);
+}
 
 .overlay {
     position: fixed;
@@ -238,31 +369,33 @@ table>caption {
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
-  }
-  .overlay:target {
+}
+
+.overlay:target {
     visibility: visible;
     opacity: 1;
-  }
-  
-  .popup {
+}
+
+.popup {
     margin: 70px auto;
     padding: 20px;
     background: var(--white);
     border-radius: 5px;
     position: relative;
     transition: all 5s ease-in-out;
-  }
-  
-  .popup h2 {
+}
+
+.popup h2 {
     margin-top: 0;
     color: var(--black);
-  }
+}
 
-  .popup p, .popup strong {
+.popup p,
+.popup strong {
     color: var(--black);
-  }
+}
 
-  .popup .close {
+.popup .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -271,30 +404,34 @@ table>caption {
     font-weight: bold;
     text-decoration: none;
     color: #333;
-  }
+}
 
-  .popup .close:hover {
+.popup .close:hover {
     color: var(--black);
-  }
-  .popup .content {
-    max-height: calc(100vh - 210px);;
+}
+
+.popup .content {
+    max-height: calc(100vh - 210px);
+    ;
     padding-right: 10px;
     overflow-y: auto;
-  }
+}
 
-  .video-container{
-      width: 50%;
-      height: auto;
-      border-style: solid;
-      border-color: var(--white);
-      border-width: 10px;
-      border-radius: 10px;
-  }
+.video-container {
+    width: 50%;
+    height: auto;
+    border-style: solid;
+    border-color: var(--white);
+    border-width: 10px;
+    border-radius: 10px;
+}
 
-  @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
     /* For phone: */
-    table, th, td {
+    table,
+    th,
+    td {
         font-size: small;
     }
 
@@ -310,14 +447,22 @@ table>caption {
 
     .popup {
         width: 85%;
-      }
-
-      .content-wrap {
-        padding-top: 30rem;
     }
-    
-    header {
-        height: 30rem;
+
+    .table-info {
+        font-size: small;
+    }
+
+    .content-wrap{
+        padding-top: 10rem;
+    }
+
+    header{
+        height: 10rem;
+    }
+
+    ul{
+        flex-direction: column;
     }
 
 }
@@ -325,7 +470,9 @@ table>caption {
 @media only screen and (min-width: 600px) {
 
     /* For tablets: */
-    table, th, td {
+    table,
+    th,
+    td {
         font-size: medium;
     }
 
@@ -341,20 +488,39 @@ table>caption {
 
     .popup {
         width: 50%;
-      }
-
-      .content-wrap {
-        padding-top: 20rem;
     }
-    
-    header {
-        height: 20rem;
+
+    .table-info {
+        font-size: medium;
+    }
+
+    ul{
+        flex-direction: row;
     }
 }
 
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 @media only screen and (min-width: 720px) and (max-width: 1000px) {
+
     /* For desktop: */
-    table, th, td {
+    table,
+    th,
+    td {
         font-size: large;
     }
 
@@ -371,13 +537,23 @@ table>caption {
 
     .popup {
         width: 50%;
-      }
+    }
+
+    .table-info {
+        font-size: large;
+    }
+
+    ul{
+        flex-direction: row;
+    }
 }
 
 @media only screen and (min-width: 1001px) {
 
     /* For desktop: */
-    table, th, td {
+    table,
+    th,
+    td {
         font-size: large;
     }
 
@@ -394,5 +570,13 @@ table>caption {
 
     .popup {
         width: 50%;
-      }
+    }
+
+    .table-info {
+        font-size: large;
+    }
+
+    ul{
+        flex-direction: row;
+    }
 }
