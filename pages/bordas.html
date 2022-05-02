@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/pageformatting.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/code.css">
+    <link rel="stylesheet" href="../css/mediaqueries.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="../css/border.css">
+    <title>Tipos de bordas</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <header>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#dropdown"> Tarefas &#11206;</a>
+                        <div class="dropdown-content">
+                            <a href="../pages/biblio.html">Autobiografia</a>
+                            <a href="../pages/eng-info.html">Engenharia informática</a>
+                            <a href="../pages/ens-super.html">Universidades e Institutos Superiores</a>
+                            <a href="../pages/descon.html">Tags e atributos descontinuados</a>
+                            <a href="../pages/novas-tags.html">Novas Tags e atributos</a>
+                            <a href="../pages/vid-mus.html">Video e Música</a>
+                            <a href="../pages/web3web4.html">Web 3 e Web 4</a>
+                            <a href="../pages/portais.html">Portais</a>
+                            <a href="../pages/horario.html">Horário</a>
+                            <a href="../pages/seletores.html">Seletores CSS</a>
+                            <a href="../pages/cores.html">Formas de representação de cores</a>
+                            <a href="../pages/fontes.html">Tipos de fontes</a>
+                            <a href="../pages/bordas.html">Tipos de bordas</a>
+                        </div>
+                    </li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="content-wrap">
+
+            <!-- Start section 1 -->
+            <section>
+                <div class="content-aligment">
+
+                    <h1>Bordas CSS</h1>
+
+                    <p>As propriedades da borda CSS permitem que você especifique o estilo, a largura e a cor da borda
+                        de um elemento.</p>
+
+                    <h2>Estilo de borda (Border Style)</h2>
+                    <p>A <strong>border-style</strong> propriedade especifica que tipo de borda exibir.</p>
+
+                    <p>Os seguintes valores são permitidos:</p>
+
+                    <ul>
+                        <li>
+                            <strong>dotted</strong> - Define uma borda pontilhada
+                        </li>
+
+                        <li>
+                            <strong>dashed</strong> - Define uma borda tracejada
+                        </li>
+
+                        <li>
+                            <strong>solid</strong> - Define uma borda sólida
+                        </li>
+
+                        <li>
+                            <strong>double</strong> - Define uma borda dupla
+                        </li>
+
+                        <li>
+                            <strong>groove</strong> - Define uma borda ranhurada 3D. O efeito depende do valor da cor da
+                            borda
+                        </li>
+
+                        <li>
+                            <strong>ridge</strong> - Define uma borda 3D estriada. O efeito depende do valor da cor da
+                            borda
+                        </li>
+
+                        <li>
+                            <strong>inset</strong> - Define uma borda de inserção 3D. O efeito depende do valor da cor
+                            da borda
+                        </li>
+
+                        <li>
+                            <strong>outset</strong> - Define uma borda inicial 3D. O efeito depende do valor da cor da
+                            borda
+                        </li>
+
+                        <li>
+                            <strong>none</strong> - Não define borda
+                        </li>
+
+                        <li>
+                            <strong>hidden</strong> - Define uma borda oculta
+                        </li>
+                    </ul>
+
+                    <p>A <strong>border-style</strong> propriedade pode ter de um a quatro valores (para a borda
+                        superior, borda
+                        direita, borda inferior e borda esquerda).</p>
+
+                    <div class="col example">
+                        <p>Exemplo: Demonstração dos diferentes estilos de borda.</p>
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+                            </code></pre>
+                    </div>
+
+                    
+                    <div class="col example">
+
+                        <p>Resultado:</p>
+
+                        <p class="dotted">Uma borda pontilhada.</p>
+                        <p class="dashed">Uma borda tracejada.</p>
+                        <p class="solid">Uma borda sólida.</p>
+                        <p class="double">Uma borda dupla.</p>
+                        <p class="groove">Uma borda de sulco. O efeito depende do valor da cor da borda.</p>
+                        <p class="ridge">Uma borda de cume. O efeito depende do valor da cor da borda.</p>
+                        <p class="inset">Uma borda inserida. O efeito depende do valor da cor da borda.</p>
+                        <p class="outset">Uma borda inicial. O efeito depende do valor da cor da borda.</p>
+                        <p class="none">Sem borda.</p>
+                        <p class="hidden">Uma borda escondida.</p>
+                        <p class="mix">Uma borda mista.</p>
+
+                    </div>
+
+                    <p><span class="text-color-green text-bold">Nota:</span> Nenhuma das outras propriedades de borda
+                        CSS terá qualquer efeito a menos que a <strong>border-style</strong> propriedade seja definida!
+                    </p>
+
+                    <h2>Largura da borda (Border Width)</h2>
+
+                    <p>A <strong>border-width</strong> propriedade especifica a largura das quatro bordas.</p>
+
+                    <p>A largura pode ser definida como um tamanho específico (em px, pt, cm, em, etc) ou usando um dos
+                        três valores predefinidos: fino, médio ou grosso.</p>
+
+                    <div class="col example">
+                        <p>Exemplo: Demonstração das diferentes larguras de borda.</p>
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.one {
+    border-style: solid;
+    border-width: 5px;
+}
+
+p.two {
+    border-style: solid;
+    border-width: medium;
+}
+
+p.three {
+    border-style: dotted;
+    border-width: 2px;
+}
+
+p.four {
+    border-style: dotted;
+    border-width: thick;
+}
+                            </code></pre>
+                    </div>
+
+                    <div class="col example">
+
+                        <p>Resultado:</p>
+
+                        <p class="one">5px border-width</p>
+
+                        <p class="two">medium border-width</p>
+
+
+                        <p class="three">2px border-width</p>
+
+                        <p class="four">thick border-width</p>
+                    </div>
+
+                    <h3>Larguras Laterais Específicas</h3>
+                    <p>A <strong>border-width</strong> propriedade pode ter de um a quatro valores (para a borda
+                        superior, borda direita, borda inferior e borda esquerda):</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.one {
+    border-style: solid;
+    border-width: 5px 20px; 
+    /* 5px topo e baixo,
+     20px nos lados */
+}
+
+p.two {
+    border-style: solid;
+    border-width: 20px 5px; 
+    /* 20px topo e baixo,
+     5px nos lados */
+}
+
+p.three {
+    border-style: solid;
+    border-width: 25px 10px 4px 35px; 
+    /* 25px topo, 10px direita,
+     4px baixo e 35px esquerda */
+}
+                                </code></pre>
+                    </div>
+
+                    <h2>Cor da borda (border-color)</h2>
+                    <p>A <strong>border-color</strong> propriedade é usada para definir a cor das quatro bordas.</p>
+
+                    <p>A cor pode ser definida por:</p>
+
+                    <ul>
+                        <li>name - especifique um nome de cor, como "vermelho"</li>
+                        <li>HEX - especifique um valor HEX, como "#ff0000"</li>
+                        <li>RGB - especifique um valor RGB, como "rgb(255,0,0)"</li>
+                        <li>HSL - especifique um valor HSL, como "hsl(0, 100%, 50%)"
+                            transparente</li>
+                    </ul>
+
+                    <p>Nota: Se <strong>border-color</strong> não estiver definido, herda a cor do elemento.</p>
+
+                    <h3>Cores Laterais Específicas</h3>
+                    <p>A <strong>border-color</strong> propriedade pode ter de um a quatro valores (para a borda
+                        superior, borda
+                        direita,
+                        borda inferior e borda esquerda).</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.one {
+    border-style: solid;
+    border-color: red green blue yellow; 
+    /* vermelho no topo, 
+    verde na direita, 
+    azul em baixo e amarelo na esquerda */
+}
+                                </code></pre>
+                    </div>
+
+                    <h3>Valores HEX</h3>
+                    <p>A cor da borda também pode ser especificada usando um valor hexadecimal (HEX):</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.one {
+    border-style: solid;
+    border-color: #ff0000; /* vermelho */
+}
+                            </code></pre>
+                    </div>
+
+                    <h3>Valores RGB</h3>
+                    <p>Ou usando valores RGB:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.one {
+    border-style: solid;
+    border-color: rgb(255, 0, 0); /* vermelho */
+}
+                            </code></pre>
+                    </div>
+
+                    <h3>Valores HSL</h3>
+                    <p>Você também pode usar valores HSL:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.one {
+    border-style: solid;
+    border-color: hsl(0, 100%, 50%); /* vermelho */
+}
+                            </code></pre>
+                    </div>
+
+                    <h2>Lados da borda</h2>
+                    <h3>Borda CSS - Lados Individuais</h3>
+                    <p>Nos exemplos anteriores, você viu que é possível especificar uma borda diferente
+                        para
+                        cada lado.</p>
+
+                    <p>Em CSS, também existem propriedades para especificar cada uma das bordas (superior, direita,
+                        inferior e esquerda):</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p {
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+}
+                                </code></pre>
+                    </div>
+
+                    <div class="col example">
+
+                        <p>Resultado:</p>
+
+                        <p class="sides">Diferentes estilos de borda</p>
+                    </div>
+
+                    <p>O exemplo acima dá o mesmo resultado que este:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p {
+    border-style: dotted solid;
+}
+                                </code></pre>
+                    </div>
+
+                    <p>Então, aqui está como funciona:</p>
+
+                    <p>Se a <strong>border-style</strong> propriedade tiver quatro valores:</p>
+
+                    <ul>
+                        <li>
+                            <b>estilo de borda: pontilhado sólido duplo tracejado;</b>
+                            <ul>
+                                <li>
+                                    borda superior é pontilhada
+                                </li>
+
+                                <li>
+                                    borda direita é sólida
+                                </li>
+
+                                <li>
+                                    borda inferior é dupla
+                                </li>
+
+                                <li>
+                                    borda esquerda é tracejada
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>Se a <strong>border-style</strong> propriedade tiver três valores:</p>
+
+                    <ul>
+                        <li>
+                            <b>estilo de borda: duplo sólido pontilhado;</b>
+                            <ul>
+                                <li>
+                                    borda superior é pontilhada
+
+                                </li>
+
+                                <li>
+                                    as bordas direita e esquerda são sólidas
+
+                                </li>
+
+                                <li>
+                                    borda inferior é dupla
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>Se a <strong>border-style</strong> propriedade tiver dois valores:</p>
+
+                    <ul>
+                        <li>
+                            <b>estilo de borda: sólido pontilhado;</b>
+                            <ul>
+                                <li>
+                                    as bordas superior e inferior são pontilhadas
+                                </li>
+
+                                <li>
+                                    as bordas direita e esquerda são sólidas
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>Se a <strong>border-style</strong> propriedade tiver um valor:</p>
+
+                    <ul>
+                        <li>
+                            <b>estilo de borda: pontilhado;</b>
+                            <ul>
+                                <li>
+                                    todas as quatro bordas são pontilhadas
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+/* Quatro valores */
+p {
+    border-style: dotted solid double dashed;
+}
+
+/* Três valores */
+p {
+    border-style: dotted solid double;
+}
+
+/* Dois valores */
+p {
+    border-style: dotted solid;
+}
+
+/* Um valor */
+p {
+    border-style: dotted;
+}
+                                </code></pre>
+                    </div>
+
+                    <p>A <strong>border-style</strong> propriedade é usada no exemplo acima. No entanto, também funciona
+                        com <strong>border-width</strong> e <strong>border-color</strong>.</p>
+
+                    <h2>Propriedade de borda abreviada de CSS</h2>
+
+                    <p>Como você viu na página anterior, há muitas propriedades a serem consideradas ao lidar com
+                        bordas.</p>
+
+                    <p>Para encurtar o código, também é possível especificar todas as propriedades de borda individuais
+                        em
+                        uma propriedade.</p>
+
+                    <p>A <strong>border</strong> propriedade é uma propriedade abreviada para as seguintes propriedades
+                        de borda individuais:</p>
+
+                    <ul>
+                        <li>
+                            <strong>border-width</strong>
+                        </li>
+
+                        <li>
+                            <strong>border-style</strong> (requerido)
+                        </li>
+
+                        <li>
+                            <strong>border-color</strong>
+                        </li>
+                    </ul>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.short {
+    border: 5px solid red;
+}
+                                </code></pre>
+                    </div>
+
+                    <div class="col example">
+                        <p>Resultado:</p>
+                        <p class="short">Algum texto</p>
+                    </div>
+
+                    <p>Você também pode especificar todas as propriedades de borda individuais para apenas um lado:</p>
+
+                    <div class="col example">
+                        <p>Borda esquerda:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.left-short {
+    border-left: 6px solid red;
+}
+                                </code></pre>
+                    </div>
+
+                    <div class="col example">
+                        <p>Resultado:</p>
+
+                        <p class="left-short">Algum texto</p>
+                    </div>
+
+                    <div class="col example">
+                        <p>Borda inferior:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.bottom-short {
+    border-bottom: 6px solid red;
+}
+                                </code></pre>
+                    </div>
+
+                    <div class="col example">
+
+                        <p>Resultado:</p>
+
+                        <p class="bottom-short">Algum texto</p>
+                    </div>
+
+                    <h2>Bordas arredondadas</h2>
+
+                    <p>A <strong>border-radius</strong> propriedade é usada para adicionar bordas arredondadas a um elemento:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.normal {
+    border: 2px solid red;
+    padding: 5px;
+}
+    
+p.round1 {
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 5px;
+}
+    
+p.round2 {
+    border: 2px solid red;
+    border-radius: 8px;
+    padding: 5px;
+}
+    
+p.round3 {
+    border: 2px solid red;
+    border-radius: 12px;
+    padding: 5px;
+}
+                                </code></pre>
+                    </div>
+
+                    <div class="col example">
+
+                        <p>Resultado:</p>
+
+                        <p class="normal">Borda normal</p>
+                        <p class="round">Borda redonda</p>
+                        <p class="rounder">Borda arredondada</p>
+                        <p class="roundest">Borda mais redonda</p>
+                        
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Section 1 -->
+
+        </div>
+        <div>
+            <footer>
+                <p>
+                    Autor: Vivaldo Roque
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../js/prism.js"></script>
+
+</body>
+
+</html>

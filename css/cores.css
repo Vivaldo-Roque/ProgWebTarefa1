@@ -1,0 +1,74 @@
+div.tomato{
+    background-color: tomato;
+}
+
+div.orange{
+    background-color: orange;
+}
+
+div.dodger-blue{
+    background-color: dodgerblue;
+}
+
+div.medium-sea-green{
+    background-color: mediumseagreen;
+}
+
+div.gray{
+    background-color: gray;
+}
+
+div.slate-blue{
+    background-color: slateblue;
+}
+
+div.violet{
+    background-color: violet;
+}
+
+div.light-gray{
+    background-color: lightgray;
+}
+
+div.tomato, div.orange, div.dodger-blue, div.medium-sea-green, div.gray, div.slate-blue, div.violet, div.light-gray{
+    text-align: center;
+    padding: 0;
+    line-height: 50px;
+    width: 180px;
+    height: 100px;
+    margin: 10px;
+}
+
+h1.text-background-color {
+    color: black;
+    background-color: DodgerBlue;
+}
+
+p.text-background-color {
+    color: black;
+    background-color: Tomato;
+}
+
+h1.text-color {
+    color: tomato;
+}
+
+p.text-color {
+    color: dodgerblue;
+}
+
+h1.border-color-tomato {
+    color: black;
+    border: 2px solid Tomato;
+
+}
+
+h1.border-color-dodger-blue {
+    color: black;
+    border: 2px solid DodgerBlue;
+}
+
+h1.border-color-violet {
+    color: black;
+    border: 2px solid Violet;
+}

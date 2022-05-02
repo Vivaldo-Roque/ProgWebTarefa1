@@ -1,0 +1,8 @@
+.video-container {
+    width: 50%;
+    height: auto;
+    border-style: solid;
+    border-color: var(--white);
+    border-width: 10px;
+    border-radius: 10px;
+}

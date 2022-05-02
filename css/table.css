@@ -1,0 +1,16 @@
+table,
+th,
+td {
+    border: 0.5px solid;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--black);
+    border-color: #7f7f7f;
+    padding: 2px;
+    font-size: small;
+}
+
+table>caption {
+    font-weight: bold
+}

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/pageformatting.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/mediaqueries.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="../css/code.css">
+    <link rel="stylesheet" href="../css/cores.css">
+    <title>Formas de representação de cores</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <header>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#dropdown"> Tarefas &#11206;</a>
+                        <div class="dropdown-content">
+                            <a href="../pages/biblio.html">Autobiografia</a>
+                            <a href="../pages/eng-info.html">Engenharia informática</a>
+                            <a href="../pages/ens-super.html">Universidades e Institutos Superiores</a>
+                            <a href="../pages/descon.html">Tags e atributos descontinuados</a>
+                            <a href="../pages/novas-tags.html">Novas Tags e atributos</a>
+                            <a href="../pages/vid-mus.html">Video e Música</a>
+                            <a href="../pages/web3web4.html">Web 3 e Web 4</a>
+                            <a href="../pages/portais.html">Portais</a>
+                            <a href="../pages/horario.html">Horário</a>
+                            <a href="../pages/seletores.html">Seletores CSS</a>
+                            <a href="../pages/cores.html">Formas de representação de cores</a>
+                            <a href="../pages/fontes.html">Tipos de fontes</a>
+                            <a href="../pages/bordas.html">Tipos de bordas</a>
+                        </div>
+                    </li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="content-wrap">
+
+            <!-- Start section 1 -->
+            <section>
+                <div class="content-aligment">
+
+                    <h1>Cores CSS</h1>
+
+                    <p>As cores são especificadas usando nomes de cores predefinidos ou valores RGB, HEX, HSL, RGBA,
+                        HSLA.</p>
+
+                    <h2>Nomes de cores</h2>
+
+                    <p>Em CSS, uma cor pode ser especificada usando um nome de cor predefinido:</p>
+
+                    <div class="col">
+
+                        <div class="row m-y-0">
+                            <div class="tomato">
+                                Tomato
+                                <br>
+                                (Tomate)
+                            </div>
+
+                            <div class="orange">
+                                Orange <br> (Laranja)
+                            </div>
+
+                            <div class="dodger-blue">
+                                DodgerBlue <br> (Trapaceiro azul)
+                            </div>
+
+                            <div class="medium-sea-green">
+                                MediumSeaGreen <br> (Verde mar médio)
+                            </div>
+                        </div>
+
+                        <div class="row m-y-0">
+                            <div class="gray">
+                                Gray <br> (Cinza)
+                            </div>
+
+                            <div class="slate-blue">
+                                SlateBlue <br> (Azul ardósia)
+                            </div>
+
+                            <div class="violet">
+                                Violet <br> (Violeta)
+                            </div>
+
+                            <div class="light-gray">
+                                LightGray <br> (Cinza claro)
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>CSS/HTML suporta 140 nomes de cores padrão.</p>
+
+                    <h2>Cor de fundo</h2>
+                    <p>Você pode definir a cor de fundo para elementos HTML:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+h1.text-background-color {
+    background-color: DodgerBlue;
+}
+
+p.text-background-color {
+    background-color: Tomato;
+}
+                                </code></pre>
+                    </div>
+
+                    <div class="col example">
+                        <p>Resultado:</p>
+
+                        <h1 class="text-background-color">Olá mundo</h1>
+
+                        <p class="text-background-color">Lorem ipsum...</p>
+
+                    </div>
+
+                    <h2>Cor do texto</h2>
+
+                    <p>Você pode definir a cor do texto:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+h1.text-color {
+    color: Tomato;
+}
+
+p.text-color {
+    color: DodgerBlue;
+}
+                                </code></pre>
+                    </div>
+
+                    <div class="col example">
+                        <p>Resultado:</p>
+
+                        <h1 class="text-color">Olá mundo</h1>
+
+                        <p class="text-color">Lorem ipsum...</p>
+
+                    </div>
+
+                    <h2>Cor da borda</h2>
+                    <p>Você pode definir a cor das bordas:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+h1.border-color-tomato {
+    border: 2px solid Tomato;
+
+}
+
+h1.border-color-dodger-blue {
+    border: 2px solid DodgerBlue;
+}
+
+h1.border-color-violet {
+    border: 2px solid Violet;
+}
+                                </code></pre>
+                    </div>
+
+                    <div class="col example">
+                        <p>Resultado:</p>
+                        <h1 class="border-color-tomato">Olá mundo</h1>
+                        <h1 class="border-color-dodger-blue">Olá mundo</h1>
+                        <h1 class="border-color-violet">Olá mundo</h1>
+                    </div>
+
+                    <h2>Valores de cores</h2>
+                    <p>Em CSS, as cores também podem ser especificadas usando valores RGB, valores HEX, valores HSL,
+                        valores RGBA e valores HSLA:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                        <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-html">
+&lt;h1 style="background-color:rgb(255, 99, 71);"&gt;...&lt;/h1&gt;
+&lt;h1 style="background-color:#ff6347;"&gt;...&lt;/h1&gt;
+&lt;h1 style="background-color:hsl(9, 100%, 64%);"&gt;...&lt;/h1&gt;
+
+&lt;h1 style="background-color:rgba(255, 99, 71, 0.5);"&gt;...&lt;/h1&gt;
+&lt;h1 style="background-color:hsla(9, 100%, 64%, 0.5);"&gt;...&lt;/h1&gt;
+                                    </code></pre>
+                    </div>
+
+                    <p>O mesmo que o nome da cor "Tomate":</p>
+
+                    <div class="col example">
+                        <p>Resultado:</p>
+                        <div class="tomato" style="line-height: 100px;">rgb(255, 99, 71)</div>
+                        <div class="tomato" style="line-height: 100px;">#ff6347</div>
+                        <div class="tomato" style="line-height: 100px;">hsl(9, 100%, 64%)</div>
+                    </div>
+
+                    <p>Igual ao nome da cor "Tomato", mas 50% transparente:</p>
+
+                    <div class="col example">
+                        <p>Resultado:</p>
+                        <div class="tomato" style="line-height: 100px; background-color: rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</div>
+                        <div class="tomato" style="line-height: 100px; background-color: hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</div>
+                    </div>
+
+                    <h2>Cores RGB</h2>
+
+                    <p>Um valor de cor RGB representa fontes de luz VERMELHA, VERDE e AZUL.</p>
+
+                    <h2>Valor RGB</h2>
+
+                    <p>Em CSS, uma cor pode ser especificada como um valor RGB, usando esta fórmula:</p>
+
+                    <p><b>rgb ( vermelho, verde , azul )</b></p>
+
+                    <p>Cada parâmetro (vermelho, verde e azul) define a intensidade da cor entre 0 e 255.</p>
+
+                    <p>Por exemplo, rgb(255, 0, 0) é exibido como vermelho, porque vermelho é definido como seu valor
+                        mais alto (255) e os outros são definidos como 0.</p>
+
+                    <p>Para exibir preto, defina todos os parâmetros de cor para 0, assim: rgb(0, 0, 0).</p>
+
+                    <p>Para exibir branco, defina todos os parâmetros de cor para 255, assim: rgb(255, 255, 255).</p>
+
+                    <p>Experimente misturando os valores RGB abaixo:</p>
+
+                    <div id="rgbresult" style="line-height: 80px; background-color: rgb(0, 0, 0);">
+                        <p id="rgbresulttext"
+                            style="font-size: 120%; font-weight: bold; font-family: Consolas, Courier New, Courier, monospace; color: rgb(255, 255, 255);">
+                            rgb(0, 0, 0)
+                        </p>
+                    </div>
+
+
+                    <div class="row example">
+                        <div class="col">
+                            <p>
+                                VERMELHO
+                            </p>
+                            <input onchange="changeRGB()" oninput="changeRGB()" type="range" id="slideRed"
+                                name="slideRed" value="255" min="0" max="255">
+                            <div id="valRed2" xstyle="background-color:red;border-radius:5px;color:white;opacity:0.8">
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>
+                                VERDE
+                            </p>
+                            <input onchange="changeRGB()" oninput="changeRGB()" type="range" id="slideGreen"
+                                name="slideGreen" value="99" min="0" max="255">
+                            <div id="valGreen2" xstyle="background-color:#00ff00;border-radius:5px;opacity:0.8">
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>
+                                AZUL
+                            </p>
+                            <input onchange="changeRGB()" oninput="changeRGB()" type="range" id="slideBlue"
+                                name="slideBlue" value="71" min="0" max="255">
+                            <div id="valBlue2" xstyle="background-color:blue;border-radius:5px;color:white;opacity:0.8">
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <p><span class="text-color-green">Desafio:</span>Tons de cinza são frequentemente definidos usando
+                        valores iguais para todas as 3 fontes de luz. Tente fazer um tom de cinza!</p>
+
+                    <h2>Valor RGBA</h2>
+                    <p>Os valores de cor RGBA são uma extensão dos valores de cor RGB com um canal alfa - que especifica
+                        a
+                        opacidade de uma cor.</p>
+
+                    <p>Um valor de cor RGBA é especificado com:</p>
+
+                    <p>rgba( vermelho, verde , azul, alfa )</p>
+
+                    <p>O parâmetro alfa é um número entre 0,0 (totalmente transparente) e 1,0 (nada transparente):</p>
+
+                    <p>Experimente misturando os valores RGBA abaixo:</p>
+
+                    <div id="rgbaresult" style="line-height: 80px; background-color: rgba(255, 99, 71, 0.5);">
+                        <p id="rgbaresulttext"
+                            style="font-size: 120%; font-weight: bold; font-family: Consolas, Courier New, Courier, monospace; color: rgb(255, 255, 255);">
+                            rgba(255, 99, 71, 0,5)
+                        </p>
+                    </div>
+
+
+                    <div class="col example">
+                        <div class="row">
+                            <p>VERMELHO</p>
+                            <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideRedA"
+                                name="slideRedA" value="255" min="0" max="255">
+                            <div id="valRed2A" xstyle="background-color:red;border-radius:5px;color:white;opacity:0.8">
+                                <p>
+                                    255
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p>VERDE</p>
+                            <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideGreenA"
+                                name="slideGreenA" value="99" min="0" max="255">
+                            <div id="valGreen2A" xstyle="background-color:#00ff00;border-radius:5px;opacity:0.8">
+                                <p>
+                                    99
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p>AZUL</p>
+                            <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideBlueA"
+                                name="slideBlueA" value="71" min="0" max="255">
+                            <div id="valBlue2A"
+                                xstyle="background-color:blue;border-radius:5px;color:white;opacity:0.8">
+                                <p>
+                                    71
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p>ALFA</p>
+                            <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideAlphaA"
+                                name="slideAlphaA" value="5" min="0" max="10">
+                            <div id="valAlpha2A"
+                                xstyle="background-color:blue;border-radius:5px;color:white;opacity:0.8">
+                                <p>
+                                    0,5
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Cores HEX</h2>
+
+                    <h3>Valor HEX</h3>
+
+                    <p>#rrggbb</p>
+
+                    <p>Onde rr (vermelho), gg (verde) e bb (azul) são valores hexadecimais entre 00 e ff (o mesmo que
+                        decimal 0-255).</p>
+
+                    <p>Por exemplo, #ff0000 é exibido como vermelho, porque o vermelho é definido com o valor mais alto
+                        (ff) e os outros são definidos com o valor mais baixo (00).</p>
+
+                    <p>
+                        Para exibir preto, defina todos os valores para 00, assim: #000000.
+                    </p>
+
+                    <p>
+                        Para exibir branco, defina todos os valores para ff, assim: #ffffff.
+                    </p>
+
+                    <p>
+                        Experimente misturando os valores HEX abaixo:
+                    </p>
+
+                    <div id="hexresult" style="line-height: 80px; background-color: rgb(0, 0, 0);">
+                        <p id="hexresulttext"
+                            style="font-size: 120%; font-weight: bold; font-family: Consolas, Courier New, Courier, monospace; color: rgb(255, 255, 255);">
+                            #ff6347
+                        </p>
+                    </div>
+
+
+                    <div class="row example">
+                        <div class="col">
+                            <p>
+                                VERMELHO
+                            </p>
+                            <input onchange="changeHex()" oninput="changeHex()" type="range" id="slideRedHex"
+                                name="slideRedHex" value="255" min="0" max="255">
+                            <div id="valRed2Hex"
+                                xstyle="background-color:red;border-radius:5px;color:white;opacity:0.8">
+                                <p>ff</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>
+                                VERDE
+                            </p>
+                            <input onchange="changeHex()" oninput="changeHex()" type="range" id="slideGreenHex"
+                                name="slideGreenHex" value="99" min="0" max="255">
+                            <div id="valGreen2Hex" xstyle="background-color:#00ff00;border-radius:5px;opacity:0.8">
+                                <p>63</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>
+                                AZUL
+                            </p>
+                            <input onchange="changeHex()" oninput="changeHex()" type="range" id="slideBlueHex"
+                                name="slideBlueHex" value="71" min="0" max="255">
+                            <div id="valBlue2Hex"
+                                xstyle="background-color:blue;border-radius:5px;color:white;opacity:0.8">
+                                <p>47</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Valor HEX de 3 dígitos</h2>
+
+                    <p>Às vezes, você verá um código hexadecimal de 3 dígitos na fonte CSS.</p>
+
+                    <p>O código hexadecimal de 3 dígitos é uma abreviação para alguns códigos hexadecimais de 6 dígitos.
+                    </p>
+
+                    <p>O código hexadecimal de 3 dígitos tem o seguinte formato:</p>
+
+                    <h3>#rgb</h3>
+
+                    <p>Onde r, g e b representam os componentes vermelho, verde e azul com valores entre 0 e f.</p>
+
+                    <p>
+                        O código hexadecimal de 3 dígitos só pode ser usado quando ambos os valores (RR, GG e BB) são os
+                        mesmos para cada componente. Então, se temos #ff00cc, pode ser escrito assim: #f0c.
+                    </p>
+
+                    <p>Aqui está um exemplo:</p>
+
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                        <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+body {
+    background-color: #fc9; /* same as #ffcc99 */
+}
+
+h1 {
+    color: #f0f; /* same as #ff00ff */
+}
+
+p {
+    color: #b58; /* same as #bb5588 */
+}
+                                    </code></pre>
+                    </div>
+
+                    <h2>Cores HSL</h2>
+
+                    <p>HSL significa matiz, saturação e leveza.</p>
+
+                    <h2>Valor HSL</h2>
+
+                    <p>Em CSS, uma cor pode ser especificada usando matiz, saturação e luminosidade (HSL) na forma:</p>
+
+                    <p>hsl ( matiz , saturação , luminosidade )</p>
+
+                    <p>
+                        Matiz é um grau na roda de cores de 0 a 360. 0 é vermelho, 120 é verde e 240 é azul.
+
+                    </p>
+                    <p> A saturação é um valor percentual, 0% significa um tom de cinza e 100% é a cor completa.</p>
+
+                    <p>A luminosidade também é uma porcentagem, 0% é preto, 50% não é claro nem escuro, 100% é branco.
+                    </p>
+
+                    <p>Experimente misturando os valores HSL abaixo:</p>
+
+                    <div id="hslresult" style="line-height: 80px; background-color: rgb(0, 0, 0);">
+                        <p id="hslresulttext"
+                            style="font-size: 120%; font-weight: bold; font-family: Consolas, Courier New, Courier, monospace; color: rgb(255, 255, 255);">
+                            hsl(0, 100%, 50%)
+                        </p>
+                    </div>
+
+
+                    <div class="row example">
+                        <div class="col">
+                            <p>
+                                Matiz
+                            </p>
+                            <input onchange="changeHsl()" oninput="changeHsl()" type="range" id="slideHue"
+                                name="slideHue" value="0" min="0" max="360">
+                            <div id="valHue" xstyle="background-color:red;border-radius:5px;color:white;opacity:0.8">
+                                <p>ff</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>
+                                SATURAÇÃO
+                            </p>
+                            <input onchange="changeHsl()" oninput="changeHsl()" type="range" id="slideSat"
+                                name="slideSat" value="100" min="0" max="100">
+                            <div id="valSat" xstyle="background-color:#00ff00;border-radius:5px;opacity:0.8">
+                                <p>63</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>
+                                LEVEZA
+                            </p>
+                            <input onchange="changeHsl()" oninput="changeHsl()" type="range" id="slideLight"
+                                name="slideLight" value="50" min="0" max="100">
+                            <div id="valLight" xstyle="background-color:blue;border-radius:5px;color:white;opacity:0.8">
+                                <p>47</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Saturação</h3>
+                    <p>A saturação pode ser descrita como a intensidade de uma cor.</p>
+
+                    <p>100% é cor pura, sem tons de cinza.</p>
+
+                    <p>50% é 50% cinza, mas você ainda pode ver a cor.</p>
+
+                    <p>0% é completamente cinza, você não pode mais ver a cor.</p>
+
+                    <h3>Leveza</h3>
+                    <p>
+                        A claridade de uma cor pode ser descrita como quanta luz você quer dar à cor, onde 0% significa sem
+                        luz (preto), 50% significa 50% luz (nem escuro nem claro) 100% significa luminosidade total
+                        (branco).
+                    </p>
+
+                    <h3>Tons de cinza</h3>
+                    <p>
+                        Os tons de cinza geralmente são definidos definindo o matiz e a saturação como 0 e ajustando a
+                        luminosidade de 0% a 100% para obter tons mais escuros/mais claros.
+                    </p>
+
+                    <h2>Valor HSLA</h2>
+                    <p>
+                        Os valores de cor HSLA são uma extensão dos valores de cor HSL com um canal alfa - que especifica a
+                        opacidade de uma cor.
+                    </p>
+
+                    <p>Um valor de cor HSLA é especificado com:</p>
+
+                    <p>hsla( matiz, saturação , luminosidade, alfa).</p>
+
+                    <p>O parâmetro alfa é um número entre 0,0 (totalmente transparente) e 1,0 (nada transparente).</p>
+
+                    <p>Experimente misturando os valores de HSLA abaixo:</p>
+
+                    <div id="hslaresult" style="line-height: 80px; background-color: rgb(0, 0, 0);">
+                        <p id="hslaresulttext"
+                            style="font-size: 120%; font-weight: bold; font-family: Consolas, Courier New, Courier, monospace; color: rgb(255, 255, 255);">
+                            hsl(0, 100%, 50%)
+                        </p>
+                    </div>
+
+
+                    <div class="row example">
+                        <div class="col">
+                            <p>
+                                Matiz
+                            </p>
+                            <input onchange="changeHsla()" oninput="changeHsla()" type="range" id="slideHueA"
+                                name="slideHueA" value="0" min="0" max="360">
+                            <div id="valHueA" xstyle="background-color:red;border-radius:5px;color:white;opacity:0.8">
+                                <p>ff</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>
+                                SATURAÇÃO
+                            </p>
+                            <input onchange="changeHsla()" oninput="changeHsla()" type="range" id="slideSatA"
+                                name="slideSatA" value="100" min="0" max="100">
+                            <div id="valSatA" xstyle="background-color:#00ff00;border-radius:5px;opacity:0.8">
+                                <p>63</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>
+                                LEVEZA
+                            </p>
+                            <input onchange="changeHsla()" oninput="changeHsla()" type="range" id="slideLightA"
+                                name="slideLightA" value="50" min="0" max="100">
+                            <div id="valLightA"
+                                xstyle="background-color:blue;border-radius:5px;color:white;opacity:0.8">
+                                <p>47</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>
+                                ALFA
+                            </p>
+                            <input onchange="changeHsla()" oninput="changeHsla()" type="range" id="slideHslAlpha"
+                                name="slideHslAlpha" value="5" min="0" max="10">
+                            <div id="valHslAlpha"
+                                xstyle="background-color:blue;border-radius:5px;color:white;opacity:0.8">
+                                <p>47</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Section 1 -->
+
+        </div>
+        <div>
+            <footer>
+                <p>
+                    Autor: Vivaldo Roque
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../js/prism.js"></script>
+    <script src="../js/w3color.js"></script>
+    <script src="../js/colors.js"></script>
+
+</body>
+
+</html>

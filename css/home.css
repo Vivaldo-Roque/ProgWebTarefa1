@@ -1,0 +1,28 @@
+.vertical-menu {
+    width: 50%;
+}
+
+.vertical-menu a {
+    display: block;
+    color: var(--white);
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+    text-decoration: none;
+    line-height: 25px;
+    background-color: #008554;
+    border-style: solid;
+    border-color: var(--grey);
+    border-width: 1px 0.2px 1px 0.2px;
+    transition: background-color 0.5s;
+    font-family: Poppins;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #04AA6D;
+    color: white;
+}

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/pageformatting.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/code.css">
+    <link rel="stylesheet" href="../css/fontes.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="../css/mediaqueries.css">
+    <title>Tipos de fontes</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <header>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#dropdown"> Tarefas &#11206;</a>
+                        <div class="dropdown-content">
+                            <a href="../pages/biblio.html">Autobiografia</a>
+                            <a href="../pages/eng-info.html">Engenharia informática</a>
+                            <a href="../pages/ens-super.html">Universidades e Institutos Superiores</a>
+                            <a href="../pages/descon.html">Tags e atributos descontinuados</a>
+                            <a href="../pages/novas-tags.html">Novas Tags e atributos</a>
+                            <a href="../pages/vid-mus.html">Video e Música</a>
+                            <a href="../pages/web3web4.html">Web 3 e Web 4</a>
+                            <a href="../pages/portais.html">Portais</a>
+                            <a href="../pages/horario.html">Horário</a>
+                            <a href="../pages/seletores.html">Seletores CSS</a>
+                            <a href="../pages/cores.html">Formas de representação de cores</a>
+                            <a href="../pages/fontes.html">Tipos de fontes</a>
+                            <a href="../pages/bordas.html">Tipos de bordas</a>
+                        </div>
+                    </li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="content-wrap">
+
+            <!-- Start section 1 -->
+            <section>
+                <div class="content-aligment">
+
+                    <h1>Fontes CSS</h1>
+
+                    <p>Escolher a fonte certa para o seu site é importante!</p>
+
+                    <p>A seleção da fonte é importante.</p>
+                    <p>Escolher a fonte certa tem um enorme impacto em como os leitores experimentam um site.</p>
+
+                    <p>A fonte certa pode criar uma identidade forte para sua marca.</p>
+
+                    <p>
+                        Usar uma fonte que seja fácil de ler é importante. A fonte agrega valor ao seu texto. Também é
+                        importante escolher a cor e o tamanho do texto corretos para a fonte.
+                    </p>
+
+                    <h2>Famílias de fontes genéricas</h2>
+
+                    <p>Em CSS existem cinco famílias de fontes genéricas:</p>
+
+                    <ul>
+                        <li>
+                            As fontes <b class="text-color-green">com serifa</b> têm um pequeno traço nas bordas de cada letra. Eles criam uma
+                            sensação
+                            de
+                            formalidade e elegância.
+                        </li>
+                        <li>
+                            As fontes <b class="text-color-green">sem serifa</b> têm linhas limpas (sem pequenos traços anexados). Eles criam um
+                            visual
+                            moderno
+                            e minimalista.
+                        </li>
+                        <li>
+                            Fontes <b class="text-color-green">monoespaçadas</b> - aqui todas as letras têm a mesma largura fixa. Eles criam uma
+                            aparência
+                            mecânica.
+                        </li>
+                        <li> As fontes <b class="text-color-green">cursivas</b> imitam a caligrafia humana.</li>
+                        <li>Fontes de <b class="text-color-green">fantasia</b> são fontes decorativas/lúdicas.</li>
+                    </ul>
+
+                    <p>Todos os nomes de fontes diferentes pertencem a uma das famílias de fontes genéricas.</p>
+
+                    <p>Diferença entre fontes com serifa e sem serifa:</p>
+
+                    <div class="col example">
+                        <div class="row">
+                            <div class="col">
+                                <p class="sanserif">F</p>
+                                <p>Sem serifa</p>
+                            </div>
+
+                            <div class="col">
+                                <p class="serif">F</p>
+                                <p>Com serifa</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p><span class="text-color-green">Observação:</span> em telas de computador, fontes sem serifa são
+                        consideradas mais fáceis de ler do que
+                        fontes com serifa.</p>
+
+                    <p>Exemplo de fontes:</p>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th style="width:20%">Família de fontes genéricas</th>
+                                <th style="width:30%">Exemplos de nomes de fontes</th>
+                            </tr>
+                            <tr>
+                                <td>Serif</td>
+                                <td><span style="font-size:150%;font-family:'Times New Roman',serif">Times New
+                                        Roman</span><br>
+                                    <span style="font-size:150%;font-family:Georgia,serif">Georgia</span><br>
+                                    <span style="font-size:150%;font-family:Garamond,serif">Garamond</span><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sans-serif</td>
+                                <td><span style="font-size:150%;font-family:Arial,sans-serif">Arial</span><br>
+                                    <span style="font-size:150%;font-family:Verdana,sans-serif">Verdana</span><br>
+                                    <span style="font-size:150%;font-family:Helvetica,sans-serif">Helvetica</span><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Monospace</td>
+                                <td><span style="font-size:150%;font-family:'Courier New',monospace">Courier
+                                        New</span><br>
+                                    <span style="font-size:150%;font-family:'Lucida Console',monospace">Lucida
+                                        Console</span><br>
+                                    <span style="font-size:150%;font-family:Monaco,monospace">Monaco</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cursive</td>
+                                <td><span style="font-size:150%;font-family:'Brush Script MT',cursive">Brush Script
+                                        MT</span><br>
+                                    <span style="font-size:150%;font-family:'Lucida Handwriting',cursive">Lucida
+                                        Handwriting</span><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Fantasy</td>
+                                <td><span style="font-size:150%;font-family:Copperplate,fantasy">Copperplate</span><br>
+                                    <span style="font-size:150%;font-family:Papyrus,fantasy">Papyrus</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>A propriedade da família de fontes (font-family)</h2>
+                    <p>Em CSS, usamos a <strong>font-family</strong> propriedade para especificar a fonte de um texto.
+                    </p>
+
+                    <p><span class="text-color-green">Nota:</span> Se o nome da fonte for mais de uma palavra, deve
+                        estar entre aspas, como: "Times New Roman".</p>
+
+                    <p>
+                        <span class="text-color-green">Dica:</span> A <strong>font-family</strong> propriedade deve
+                        conter vários nomes de fontes como um sistema "fallback (substituto / reserva)", para
+                        garantir a máxima compatibilidade entre navegadores/sistemas operacionais. Comece com a fonte
+                        desejada e termine com uma família genérica (para permitir que o navegador escolha uma fonte
+                        semelhante na família genérica, se não houver outras fontes disponíveis). Os nomes das fontes
+                        devem
+                        ser separados por vírgula.
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo: Algumas fontes diferentes para três parágrafos.</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+.p1 {
+    font-family: "Times New Roman", Times, serif;
+}
+    
+.p2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+</code></pre>
+                    </div>
+
+                    <h2>O que são fontes seguras da Web?</h2>
+                    <p>
+                        As fontes seguras da Web são fontes instaladas universalmente em todos os navegadores e
+                        dispositivos.
+                    </p>
+
+                    <h2>Fontes substitutas (fallbacks)</h2>
+                    <p>
+                        No entanto, não existem fontes 100% totalmente seguras para a web. Há sempre uma chance de que
+                        uma
+                        fonte não seja encontrada ou não esteja instalada corretamente.
+                    </p>
+
+                    <p> Portanto, é muito importante sempre usar fontes de fallback.</p>
+
+                    <p>
+                        Isso significa que você deve adicionar uma lista de "fontes de backup" semelhantes na
+                        <strong>font-family</strong>
+                        propriedade. Se a primeira fonte não funcionar, o navegador tentará a próxima, e a próxima e
+                        assim
+                        por diante. Sempre termine a lista com um nome de família de fonte genérico.
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo: aqui, existem três tipos de fontes: Tahoma, Verdana e sans-serif. A segunda e
+                            terceira fontes são backups, caso a primeira não seja encontrada.</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+</code></pre>
+                    </div>
+
+                    <h2>Melhores fontes seguras da Web para HTML e CSS</h2>
+                    <p>A lista a seguir são as melhores fontes seguras da Web para HTML e CSS:</p>
+
+                    <ul>
+                        <li>Arial (sem serifa)</li>
+                        <li>Verdana (sem serifa)</li>
+                        <li>Helvetica (sem serifa)</li>
+                        <li>Tahoma (sem serifa)</li>
+                        <li>Trebuchet MS (sem serifa)</li>
+                        <li>Times New Roman (serifa)</li>
+                        <li>Georgia (serif)</li>
+                        <li>Garamond (serifa)</li>
+                        <li>Courier New (monoespaço)</li>
+                        <li>Brush Script MT (cursiva)</li>
+                    </ul>
+
+                    <p>
+                        <span class="text-color-green">Observação:</span> antes de publicar seu site, sempre verifique
+                        como suas fontes aparecem em diferentes
+                        navegadores e dispositivos e sempre use fontes alternativas!
+                    </p>
+
+                    <h3>Arial (sem serifa)</h3>
+                    <p>
+                        Arial é a fonte mais usada para mídia online e impressa. Arial também é a fonte padrão no Google
+                        Docs.
+                    </p>
+
+                    <p>Arial é uma das fontes da Web mais seguras e está disponível em todos os principais sistemas
+                        operacionais.</p>
+
+                    <h3>Verdana (sem serifa)</h3>
+                    <p>
+                        Verdana é uma fonte muito popular. Verdana é facilmente legível mesmo para tamanhos de fonte
+                        pequenos.
+                    </p>
+
+                    <h3>Helvetica (sem serifa)</h3>
+                    <p>A fonte Helvetica é amada pelos designers. É adequado para muitos tipos de negócios.</p>
+
+                    <h3>Tahoma (sem serifa)</h3>
+                    <p>A fonte Tahoma tem menos espaço entre os caracteres.</p>
+
+                    <h3>Trebuchet MS (sem serifa)</h3>
+                    <p>
+                        Trebuchet MS foi projetado pela Microsoft em 1996. Use essa fonte com cuidado. Não suportado por
+                        todos os sistemas operacionais móveis.
+                    </p>
+
+                    <h3>Times New Roman (serifa)</h3>
+                    <p>
+                        Times New Roman é uma das fontes mais conhecidas do mundo. Parece profissional e é usado em
+                        muitos
+                        jornais e sites de "notícias". É também a fonte principal para dispositivos e aplicativos
+                        Windows.
+                    </p>
+
+                    <h3>Georgia (serifa)</h3>
+                    <p>
+                        Georgia é uma fonte com serifa elegante. É muito legível em diferentes tamanhos de fonte, por
+                        isso é
+                        um bom candidato para design responsivo a dispositivos móveis.
+                    </p>
+
+                    <h3>Garamond (serifa)</h3>
+                    <p>
+                        Garamond é uma fonte clássica usada em muitos livros impressos. Tem uma aparência atemporal e
+                        boa
+                        legibilidade.
+                    </p>
+
+                    <h3>Courier New (monoespaço)</h3>
+                    <p>
+                        Courier New é a fonte serif monoespaçada mais usada. Courier New é frequentemente usado com
+                        exibições de codificação, e muitos provedores de e-mail o usam como fonte padrão. Courier New
+                        também
+                        é a fonte padrão para roteiros de filmes.
+
+                    </p>
+                    <h3>Brush Script MT (cursiva)</h3>
+                    <p>
+                        A fonte Brush Script MT foi projetada para imitar a caligrafia. É elegante e sofisticado, mas
+                        pode
+                        ser difícil de ler. Use-o com cuidado.
+                    </p>
+
+                    <h2>Fallbacks de fonte CSS comumente usados</h2>
+
+                    <p>
+                        Abaixo estão alguns fallbacks de fontes comumente usados, organizados pelas 5 famílias de fontes
+                        genéricas:
+                    </p>
+
+                    <ul>
+                        <li>Serif (Serifa)</li>
+                        <li>Sans-serif (Sem serifa)</li>
+                        <li>Monospace (Monoespaço)</li>
+                        <li>Cursive (Cursiva)</li>
+                        <li>Fantasy (Fantasia)</li>
+                    </ul>
+
+                    <h2>Estilo de fonte</h2>
+                    <p>A <strong>font-style</strong> propriedade é usada principalmente para especificar texto em
+                        itálico.</p>
+
+                    <p>Esta propriedade tem três valores:</p>
+
+                    <ul>
+                        <li>normal (normal) - O texto é mostrado normalmente.</li>
+                        <li>italic (itálico) - O texto é mostrado em itálico.</li>
+                        <li>oblique (oblíquo) - O texto está "inclinado" (o oblíquo é muito semelhante ao itálico, mas
+                            menos suportado).</li>
+                    </ul>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.normal {
+    font-style: normal;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+p.oblique {
+    font-style: oblique;
+}
+
+</code></pre>
+                    </div>
+
+                    <h2>Espessura da fonte</h2>
+                    <p>A <strong>font-weight</strong> propriedade especifica o peso de uma fonte:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.normal {
+    font-weight: normal;
+}
+
+p.thick {
+    font-weight: bold;
+}
+
+</code></pre>
+                    </div>
+
+                    <h2>Variante de fonte</h2>
+                    <p>A <strong>font-variant</strong> propriedade especifica se um texto deve ou não ser exibido em uma
+                        fonte em versalete.</p>
+
+                    <p>
+                        Em uma fonte de letras minúsculas, todas as letras minúsculas são convertidas em letras
+                        maiúsculas.
+                        No entanto, as letras maiúsculas convertidas aparecem em um tamanho de fonte menor do que as
+                        letras
+                        maiúsculas originais no texto.
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.normal {
+    font-variant: normal;
+}
+
+p.small {
+    font-variant: small-caps;
+}
+</code></pre>
+                    </div>
+
+                    <h2>Tamanho da fonte</h2>
+                    <p>A <strong>font-size</strong> propriedade define o tamanho do texto.</p>
+
+                    <p>
+                        Ser capaz de gerenciar o tamanho do texto é importante no design da web. No entanto, você não
+                        deve
+                        usar ajustes de tamanho de fonte para fazer com que os parágrafos pareçam títulos ou os títulos
+                        pareçam parágrafos.
+                    </p>
+
+                    <p>Sempre use as tags HTML apropriadas, como <strong>&lt;h1&gt;</strong> - <strong>&lt;h6&gt;</strong> para títulos e <strong>&lt;p&gt;</strong> para
+                        parágrafos.</p>
+
+                    <p>O valor do tamanho da fonte pode ser um tamanho absoluto ou relativo.</p>
+
+                    <p>Tamanho absoluto:</p>
+
+                    <ul>
+                        <li>Define o texto para um tamanho especificado.</li>
+                        <li>
+                            Não permite que um usuário altere o tamanho do texto em todos os navegadores (ruim por
+                            motivos de acessibilidade).
+                        </li>
+                        <li>O tamanho absoluto é útil quando o tamanho físico da saída é conhecido.</li>
+                    </ul>
+                    <p>Tamanho relativo:</p>
+
+                    <ul>
+                        <li>Define o tamanho em relação aos elementos circundantes.</li>
+                        <li>Permite que um usuário altere o tamanho do texto nos navegadores.</li>
+                    </ul>
+
+                    <p><span class="text-color-green">Nota:</span> Se você não especificar um tamanho de fonte, o
+                        tamanho padrão para texto normal,
+                        como parágrafos, é 16px (16px = 1em).</p>
+
+                    <h2>Definir o tamanho da fonte com pixels</h2>
+
+                    <div class="col example">
+                        <p>Exemplo: Definir o tamanho do texto com pixels oferece controle total sobre o tamanho do
+                            texto.</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 14px;
+}
+</code></pre>
+                    </div>
+
+                    <p>
+                        <span class="text-color-green">Dica:</span> Se você usar pixels, ainda poderá usar a ferramenta
+                        de zoom para redimensionar a página
+                        inteira.
+                    </p>
+
+                    <h2>Definir tamanho da fonte com Em</h2>
+
+                    <p>
+                        Para permitir que os usuários redimensionem o texto (no menu do navegador), muitos
+                        desenvolvedores
+                        usam em vez de pixels.
+                    </p>
+
+                    <p>
+                        1em é igual ao tamanho da fonte atual. O tamanho de texto padrão nos navegadores é 16px.
+                        Portanto, o
+                        tamanho padrão de 1em é 16px.
+                    </p>
+
+                    <p>O tamanho pode ser calculado de pixels para em usando esta fórmula: pixels / 16 = em</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+h1 {
+    font-size: 2.5em; /* 40px/16=2.5em */
+}
+
+h2 {
+    font-size: 1.875em; /* 30px/16=1.875em */
+}
+
+p {
+    font-size: 0.875em; /* 14px/16=0.875em */
+}
+</code></pre>
+                    </div>
+
+                    <p>
+                        No exemplo acima, o tamanho do texto em em é o mesmo do exemplo anterior em pixels. No entanto,
+                        com
+                        o tamanho em, é possível ajustar o tamanho do texto em todos os navegadores.
+                    </p>
+
+                    <p>
+                        Infelizmente, ainda há um problema com versões mais antigas do Internet Explorer. O texto fica
+                        maior
+                        do que deveria quando fica maior e menor do que deveria quando fica menor.
+                    </p>
+
+                    <h2>Use uma combinação de porcentagem e Em</h2>
+                    <p>
+                        A solução que funciona em todos os navegadores é definir um tamanho de fonte padrão em
+                        porcentagem
+                        para o elemento.
+                    </p>
+
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+body {
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.875em;
+}
+
+p {
+    font-size: 0.875em;
+}
+</code></pre>
+                    </div>
+
+                    <p>
+                        Nosso código agora funciona muito bem! Ele mostra o mesmo tamanho de texto em todos os
+                        navegadores e permite que todos os navegadores ampliem ou redimensionem o texto!
+                    </p>
+
+                    <h2>Tamanho da fonte responsiva</h2>
+
+                    <p>
+                        O tamanho do texto pode ser definido com uma vwunidade, o que significa a "largura da janela de
+                        visualização".
+                    </p>
+
+                    <p>Dessa forma, o tamanho do texto seguirá o tamanho da janela do navegador:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-html">
+&lt;h1 style="font-size:10vw"&gt;Hello World&lt;/h1&gt;
+
+</code></pre>
+                    </div>
+
+                    <div class="col example">
+                        <p>Resultado:</p>
+                        <h1 style="font-size:5vw">Olá Mundo</h1>
+                        <p style="font-size:2.5vw">Redimensione a janela do navegador para ver como o tamanho da fonte é
+                            dimensionado.</p>
+                    </div>
+
+                    <p>
+                        Viewport é o tamanho da janela do navegador. 1vw = 1% da largura da janela de visualização. Se a
+                        janela de visualização tiver 50 cm de largura, 1vw é 0,5 cm.
+                    </p>
+
+                    
+
+                </div>
+            </section>
+            <!-- End Section 1 -->
+
+        </div>
+        <div>
+            <footer>
+                <p>
+                    Autor: Vivaldo Roque
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../js/prism.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+/* Variaveis */
+
+:root {
+    /* Cores em Hexadecimal */
+    --white: #E7E9EB;
+    --grey: #333333;
+    --light-green: #04AA6D;
+    --dark-green: #028d5a;
+    --robin-egg-blue: #12C9CC;
+    --black: #000000;
+    --blue: #2e7dd6;
+    --electric-pink: #F92672;
+    --pattern-color1: #4b4b4b;
+    --pattern-color2: #4b4b4b77;
+
+    /* Tipo de letra */
+
+    --letter-type: Roboto;
+
+    /* Tamanho das letras */
+
+    --all: medium;
+    --h1: 2em;
+    --h2: 1.5em;
+    --h3: 1.17em;
+    --h4: 1em;
+    --h5: 0.83em;
+    --h6: 0.75em;
+
+}

@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/pageformatting.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/code.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/mediaqueries.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <title>Selectores CSS</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <header>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#dropdown"> Tarefas &#11206;</a>
+                        <div class="dropdown-content">
+                            <a href="../pages/biblio.html">Autobiografia</a>
+                            <a href="../pages/eng-info.html">Engenharia informática</a>
+                            <a href="../pages/ens-super.html">Universidades e Institutos Superiores</a>
+                            <a href="../pages/descon.html">Tags e atributos descontinuados</a>
+                            <a href="../pages/novas-tags.html">Novas Tags e atributos</a>
+                            <a href="../pages/vid-mus.html">Video e Música</a>
+                            <a href="../pages/web3web4.html">Web 3 e Web 4</a>
+                            <a href="../pages/portais.html">Portais</a>
+                            <a href="../pages/horario.html">Horário</a>
+                            <a href="../pages/seletores.html">Seletores CSS</a>
+                            <a href="../pages/cores.html">Formas de representação de cores</a>
+                            <a href="../pages/fontes.html">Tipos de fontes</a>
+                            <a href="../pages/bordas.html">Tipos de bordas</a>
+                        </div>
+                    </li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="content-wrap">
+
+            <!-- Start section 1 -->
+            <section>
+                <div class="content-aligment">
+
+                    <h1>Seletores CSS</h1>
+
+                    <p>Em CSS para selecionar um ou mais elementos(tags) HTML que você deseja estilizar fazemos uso de
+                        seletores.</p>
+
+                    <p>Podemos dividir os seletores CSS em cinco categorias:</p>
+
+                    <ul>
+                        <li>
+                            Seletores simples (selecione elementos com base no nome, id, classe)
+                        </li>
+                        <li>
+                            Seletores de combinação (selecione elementos com base em um relacionamento específico entre
+                            eles)
+                        </li>
+                        <li>
+                            Seletores de pseudo-classe (selecionar elementos com base em um determinado estado)
+                        </li>
+                        <li>
+                            Seletores de pseudo-elementos (selecione e estilize uma parte de um elemento)
+                        </li>
+                        <li>
+                            Seletores de atributo (selecione elementos com base em um atributo ou valor de atributo)
+                        </li>
+                    </ul>
+
+                    <h2>Seletores simples</h2>
+
+                    <h3>O seletor universal</h3>
+                    <p>O seletor universal (*) seleciona todos os elementos HTML na página.</p>
+
+                    <div class="col example">
+                        <p>Exemplo: A regra CSS abaixo afetará todos os elementos HTML na página.</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p { color: red }
+
+</code></pre>
+                    </div>
+
+                    <h3>O seletor de elementos</h3>
+
+                    <p>O seletor de elemento seleciona elementos HTML com base no nome do elemento.</p>
+
+                    <div class="col example">
+                        <p>Exemplo: Aqui, todos os elementos &lt;p&gt; na página serão alinhados ao centro, com uma cor
+                            de texto vermelha.</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p {
+    text-align: center;
+    color: red;
+}</code>
+                        </pre>
+                    </div>
+
+                    <h3>O seletor de id</h3>
+
+                    <p>O seletor id usa o atributo id de um elemento HTML para selecionar um elemento específico.</p>
+                    <p>O id de um elemento é único dentro de uma página, então o seletor de id é usado para selecionar
+                        um
+                        elemento único!</p>
+                    <p>Para selecionar um elemento com um id específico, escreva um caractere hash (#), seguido do id do
+                        elemento.</p>
+
+                    <div class="col example">
+                        <p>Exemplo: A regra CSS abaixo será aplicada ao elemento HTML com id="para1".</p>
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+#para1 {
+    text-align: center;
+    color: red;
+}</code>
+                            </pre>
+                    </div>
+
+                    <h3>O seletor de classe</h3>
+                    <p>O seletor de classe seleciona elementos HTML com um atributo de classe específico.</p>
+
+                    <p>Para selecionar elementos com uma classe específica, escreva um caractere ponto (.), seguido do
+                        nome
+                        da classe.</p>
+
+                    <div class="col example">
+                        <p>Exemplo: Neste exemplo, todos os elementos HTML com class="center" serão vermelhos e
+                            alinhados ao centro.</p>
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+.center {
+    text-align: center;
+    color: red;
+}</code>
+                            </pre>
+                    </div>
+
+                    <p>Você também pode especificar que apenas elementos HTML específicos devem ser afetados por uma
+                        classe.</p>
+
+                    <div class="col example">
+                        <p>Exemplo: Neste exemplo, apenas os elementos
+                        <p> com class="center" serão vermelhos e alinhados ao centro.</p>
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.center {
+    text-align: center;
+    color: red;
+}</code>
+                            </pre>
+                    </div>
+
+                    <p>Elementos HTML também podem se referir a mais de uma classe.</p>
+
+                    <div class="col example">
+                        <p>Exemplo: Neste exemplo, o elemento
+                        <p> será estilizado de acordo com class="center" e class="large".</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-html">
+&lt;p class="center large"&gt;This paragraph refers to two classes.&lt;/p&gt;</code>
+                        </pre>
+                    </div>
+
+                    <h3>O seletor de agrupamento</h3>
+                    <p>O seletor de agrupamento seleciona todos os elementos e classes HTML com as mesmas definições de
+                        estilo.</p>
+
+                    <p>Veja o seguinte código CSS (os elementos h1, h2 e p têm as mesmas definições de estilo):</p>
+
+                    <div class="col example">
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+h1 {
+    text-align: center;
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    color: red;
+}
+
+p {
+    text-align: center;
+    color: red;
+}</code>
+                            </pre>
+                    </div>
+
+                    <p>Será melhor agrupar os seletores, para minimizar o código.</p>
+
+                    <p>Para agrupar seletores, separe cada seletor com uma vírgula.</p>
+
+                    <div class="col example">
+                        <p>Exemplo: Neste exemplo agrupamos os seletores do código acima.</p>
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+h1, h2, p {
+    text-align: center;
+    color: red;
+}</code>
+                            </pre>
+                    </div>
+
+                    <h2>Seletores de combinação/composto</h2>
+
+                    <p>Um combinador é algo que explica a relação entre os seletores.</p>
+                    <p>Um seletor CSS pode conter mais de um seletor simples. Entre os seletores simples, podemos
+                        incluir um combinador.</p>
+                    <p>Existem quatro combinadores diferentes em CSS:</p>
+
+                    <ul>
+                        <li>
+                            seletor descendente (espaço)
+                        </li>
+
+                        <li>
+                            seletor filho (>)
+                        </li>
+
+                        <li>
+                            seletor irmão adjacente (+)
+                        </li>
+
+                        <li>
+                            seletor geral de irmãos (~)
+                        </li>
+                    </ul>
+
+                    <h3>Seletor de Descendentes</h3>
+                    <p>O seletor descendente corresponde a todos os elementos que são descendentes de um elemento
+                        especificado.</p>
+
+                    <p>O exemplo a seguir seleciona todos os elementos &lt;p&gt; dentro dos elementos &lt;div&gt;:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+div p {
+    background-color: yellow;
+}</code>
+                            </pre>
+                    </div>
+
+                    <h3>Seletor filho (>)</h3>
+                    <p>O seletor filho seleciona todos os elementos que são filhos de um elemento especificado.</p>
+
+                    <p>O exemplo a seguir seleciona todos os elementos &lt;p&gt; que são filhos de um elemento
+                        &lt;div&gt;:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+div > p {
+    background-color: yellow;
+}</code>
+                                </pre>
+                    </div>
+
+                    <h3>Seletor de irmãos adjacentes (+)</h3>
+                    <p>O seletor irmão adjacente é usado para selecionar um elemento que está diretamente após
+                        outro elemento específico.</p>
+
+                    <p>Elementos irmãos devem ter o mesmo elemento pai, e "adjacente" significa "imediatamente a
+                        seguir".</p>
+
+                    <p>O exemplo a seguir seleciona o primeiro elemento &lt;p&gt; que é colocado imediatamente após os
+                        elementos
+                        &lt;div&gt;:</p>
+
+                    <div class="col example">
+                        <p>Exemplo: </p>
+                        <pre>
+                                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+div + p {
+    background-color: yellow;
+}</code>
+                                        </pre>
+                    </div>
+
+                    <h3>Seletor Geral de Irmãos (~)</h3>
+                    <p>O seletor irmão geral seleciona todos os elementos que são os próximos irmãos de um
+                        elemento especificado.</p>
+
+                    <p>O exemplo a seguir seleciona todos os elementos &lt;p&gt; que são os próximos irmãos dos
+                        elementos
+                        &lt;div&gt;:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+div ~ p {
+    background-color: yellow;
+}</code>
+                                            </pre>
+                    </div>
+
+                    <h2>Seletores de atributos</h2>
+
+                    <h3>Estilizar elementos HTML com atributos específicos</h3>
+                    <p>É possível estilizar elementos HTML que possuem atributos ou valores de atributos específicos.
+                    </p>
+
+                    <h3>Seletor de CSS [atributo]</h3>
+                    <p>O [attribute] seletor é usado para selecionar elementos com um atributo especificado.</p>
+
+                    <p>O exemplo a seguir seleciona todos os elementos &lt;a&gt; com um atributo target:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+a[target] {
+    background-color: yellow;
+}</code>
+                                            </pre>
+                    </div>
+
+                    <h3>Seletor de CSS [attribute="value"]</h3>
+                    <p>O [attribute="value"] seletor é usado para selecionar elementos com um atributo e valor
+                        especificados.</p>
+
+                    <p>O exemplo a seguir seleciona todos os elementos &lt;a&gt; com um atributo target="_blank":</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+a[target="_blank"] {
+    background-color: yellow;
+}</code>
+                                                </pre>
+                    </div>
+
+                    <h3>Seletor de CSS [attribute~="value"]</h3>
+                    <p>O [attribute~="value"] seletor é usado para selecionar elementos com um valor de atributo
+                        contendo uma palavra especificada.</p>
+
+                    <p>O exemplo a seguir seleciona todos os elementos com um atributo title que contém uma lista
+                        de palavras separadas por espaço, uma das quais é "flor":</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                                        <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+[title~="flower"] {
+    border: 5px solid yellow;
+}</code>
+                                                    </pre>
+                    </div>
+
+                    <p>O exemplo acima corresponderá a elementos com title="flower", title="summer flower" e
+                        title="flower new", mas não title="my-flower" ou title="flowers".</p>
+
+                    <h3>Seletor de CSS [attribute|="value"]</h3>
+                    <p>O [attribute|="value"] seletor é usado para selecionar elementos com o atributo especificado,
+                        cujo valor pode ser exatamente o valor especificado, ou o valor especificado seguido de um
+                        hífen (-).</p>
+
+                    <p>Nota: O valor deve ser uma palavra inteira, sozinha, como class="top", ou seguida por um
+                        hífen( - ), como class="top-text".</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                                        <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+[class|="top"] {
+    background: yellow;
+}</code>
+                                                    </pre>
+                    </div>
+
+                    <h3>Seletor de CSS [attribute^="value"]</h3>
+                    <p>O [attribute^="value"] seletor é usado para selecionar elementos com o atributo especificado,
+                        cujo valor começa com o valor especificado.</p>
+
+                    <p>O exemplo a seguir seleciona todos os elementos com um valor de atributo de classe que
+                        começa com "top":</p>
+
+                    <p>Nota: O valor não precisa ser uma palavra inteira!</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                                        <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+[class^="top"] {
+    background: yellow;
+}</code>
+                                                    </pre>
+                    </div>
+
+                    <h3>Seletor de CSS [attribute$="value"]</h3>
+                    <p>O [attribute$="value"] seletor é usado para selecionar elementos cujo valor de atributo
+                        termina com um valor especificado.</p>
+
+                    <p>O exemplo a seguir seleciona todos os elementos com um valor de atributo de classe que
+                        termina com "test":</p>
+
+                    <p>Nota: O valor não precisa ser uma palavra inteira!</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                                        <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+[class$="test"] {
+    background: yellow;
+}</code>
+                                                    </pre>
+                    </div>
+
+                    <h3>Seletor de CSS [attribute*="value"]</h3>
+                    <p>O [attribute*="value"] seletor é usado para selecionar elementos cujo valor de atributo
+                        contém um valor especificado.</p>
+
+                    <p>O exemplo a seguir seleciona todos os elementos com um valor de atributo de classe que
+                        contém "te":</p>
+
+                    <p>Nota: O valor não precisa ser uma palavra inteira!</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                                        <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+[class*="te"] {
+    background: yellow;
+}</code>
+                                                    </pre>
+                    </div>
+
+                    <h3>Formas de estilo</h3>
+                    <p>Os seletores de atributo podem ser úteis para estilizar formulários sem classe ou ID:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                                                        <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+input[type="text"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: yellow;
+}
+
+input[type="button"] {
+    width: 120px;
+    margin-left: 35px;
+    display: block;
+}</code>
+                                                    </pre>
+                    </div>
+
+
+                    <h2>Seletores pseudo-classe</h2>
+
+                    <p>O que são pseudoclasses?</p>
+                    <p>Uma pseudo-classe é usada para definir um estado especial de um elemento.</p>
+
+                    <p>Por exemplo, pode ser usado para:</p>
+
+                    <ul>
+                        <li>Estilizar um elemento quando um usuário passa o mouse sobre ele.</li>
+                        <li>Estilize links visitados e não visitados de maneira diferente.</li>
+                        <li>Estilize um elemento quando ele estiver em foco.</li>
+                    </ul>
+
+                    <h3>Sintaxe</h3>
+                    <p>A sintaxe das pseudoclasses:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre><code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+selector:pseudo-class {
+    property: value;
+}
+</code></pre>
+                    </div>
+
+                    <h2>Pseudo-classes âncora (Anchor)</h2>
+
+                    <p>Os links podem ser exibidos de diferentes maneiras:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre><code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+/* unvisited link */
+a:link {
+    color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+    color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
+</code></pre>
+                    </div>
+
+                    <p>Nota: <strong>a:hover</strong> DEVE vir depois <strong>a:linke</strong>
+                        <strong>a:visited</strong> na definição CSS para ser eficaz! <strong>a:active</strong> DEVE vir
+                        depois <strong>a:hover</strong> na definição CSS para ser eficaz! Os nomes de pseudoclasses não
+                        diferenciam
+                        maiúsculas de minúsculas.
+                    </p>
+
+                    <h2>Pseudo-classes e classes HTML</h2>
+                    <p>Pseudo-classes podem ser combinadas com classes HTML:</p>
+
+                    <p>
+                        Quando você passa o mouse sobre o link no exemplo, ele muda de cor:
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre><code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+a.highlight:hover {
+    color: #ff0000;
+}
+</code></pre>
+                    </div>
+
+                    <p>
+                        Passe o mouse em <strong>&lt;div&gt;</strong>
+                        Um exemplo de uso da <strong>:hover</strong> pseudoclasse em um elemento
+                        <strong>&lt;div&gt;</strong>:
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre><code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+div:hover {
+    background-color: blue;
+}
+    </code></pre>
+                    </div>
+
+                    <p>Dica de ferramenta simples.</p>
+
+                    <div class="col example">
+                        <p>Exemplo: Passe o mouse sobre um elemento &lt;div&gt; para mostrar um elemento &lt;p&gt; (como
+                            uma dica de
+                            ferramenta).</p>
+                        <pre><code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p {
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+}
+
+div:hover p {
+    display: block;
+}
+                </code></pre>
+                    </div>
+
+                    <h2>CSS - A pseudo-classe :first-child</h2>
+                    <p>
+                        A <strong>:first-child</strong> pseudoclasse corresponde a um elemento especificado que é o
+                        primeiro
+                        filho de outro elemento.
+                    </p>
+
+                    <p>Corresponde ao primeiro elemento <strong>&lt;p&gt;</strong>.</p>
+                    <p>
+                        No exemplo a seguir, o seletor corresponde a qualquer elemento
+                        <strong>&lt;p&gt;</strong> que seja o primeiro filho de qualquer elemento:
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre><code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p:first-child {
+    color: blue;
+}
+                </code></pre>
+                    </div>
+
+                    <h3>Corresponde ao primeiro elemento &lt;i&gt; em todos os elementos &lt;p&gt;</h3>
+                    <p>
+                        No exemplo a seguir, o seletor corresponde ao primeiro elemento <strong>&lt;i&gt;</strong> em
+                        todos
+                        os elementos <strong>&lt;p&gt;</strong>:
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre><code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p i:first-child {
+    color: blue;
+}
+                            </code></pre>
+                    </div>
+
+                    <h3>
+                        Corresponde a todos os elementos &lt;i&gt; em todos os primeiros elementos
+                        &lt;p&gt; filhos
+                    </h3>
+                    <p>
+                        No exemplo a seguir, o seletor corresponde a todos os
+                        elementos <strong>&lt;i&gt;</strong> em elementos <strong>&lt;p&gt;</strong> que são o primeiro
+                        filho de
+                        outro elemento:
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre><code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p:first-child i {
+    color: blue;
+}
+                                                </code></pre>
+                    </div>
+
+                    <h2>CSS - A pseudoclasse :lang</h2>
+                    <p>
+                        A <strong>:lang</strong> pseudo-classe permite definir regras
+                        especiais para diferentes idiomas.
+                    </p>
+
+                    <p>
+                        No exemplo abaixo, <strong>:lang</strong> define as aspas para
+                        elementos <strong>&lt;q&gt;</strong> com <strong>lang="no"</strong>:
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre><code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-html">
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;style&gt;
+q:lang(no) {
+    quotes: "~""~";
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;p&gt;Some text &lt;q lang="no"&gt;A quote in a paragraph&lt;/q&gt; Some text.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+                                                </code></pre>
+                    </div>
+
+                    <h2>Todas as pseudoclasses CSS</h2>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th style="width:20%">Seletor</th>
+                                <th style="width:20%">Exemplo</th>
+                                <th>Descrição do exemplo</th>
+                            </tr>
+                            <tr>
+                                <td>:active</td>
+                                <td>a:active</td>
+                                <td>Seleciona o link ativo</td>
+                            </tr>
+                            <tr>
+                                <td>:checked</td>
+                                <td>input:checked</td>
+                                <td>Seleciona cada &lt;input&gt; elemento</td>
+                            </tr>
+                            <tr>
+                                <td>:disabled</td>
+                                <td>input:disabled</td>
+                                <td>Seleciona todas as &lt;input&gt; elemento</td>
+                            </tr>
+                            <tr>
+                                <td>:empty</td>
+                                <td>p:empty</td>
+                                <td>Seleciona cada &lt;p&gt; elemento que não tem filhos</td>
+                            </tr>
+                            <tr>
+                                <td>:enabled</td>
+                                <td>input:enabled</td>
+                                <td>Seleciona todas as &lt;input&gt; elemento</td>
+                            </tr>
+                            <tr>
+                                <td>:first-child</td>
+                                <td>p:first-child</td>
+                                <td>Seleciona cada &lt;p&gt; elementos que é o primeiro filho de seu pai</td>
+                            </tr>
+                            <tr>
+                                <td>:first-of-type</td>
+                                <td>p:first-of-type</td>
+                                <td>Seleciona cada &lt;p&gt; elemento que é o primeiro &lt;p&gt; elemento de seu pai
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>:focus</td>
+                                <td>input:focus</td>
+                                <td>Seleciona a &lt;entrada&gt; elemento que tem foco</td>
+                            </tr>
+                            <tr>
+                                <td>:hover</td>
+                                <td>a:hover</td>
+                                <td>Seleciona links ao passar o mouse</td>
+                            </tr>
+                            <tr>
+                                <td>:in-range</td>
+                                <td>input:in-range</td>
+                                <td>Seleciona &lt;entrada&gt; elementos com um valor dentro de um intervalo especificado
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>:invalid</td>
+                                <td>input:invalid</td>
+                                <td>Seleciona todas as &lt;entradas&gt; elementos com valor inválido</td>
+                            </tr>
+                            <tr>
+                                <td>:lang(<i>language</i>)</td>
+                                <td>p:lang(it)</td>
+                                <td>Seleciona cada &lt;p&gt; elemento com um valor de atributo lang começando com "it"
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>:last-child</td>
+                                <td>p:last-child</td>
+                                <td>Seleciona cada &lt;p&gt; elementos que é o último filho de seu pai</td>
+                            </tr>
+                            <tr>
+                                <td>:last-of-type</td>
+                                <td>p:last-of-type</td>
+                                <td>Seleciona cada &lt;p&gt; elemento que é o último &lt;p&gt; elemento de seu pai
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>:link</td>
+                                <td>a:link</td>
+                                <td>Seleciona todos os links não visitados</td>
+                            </tr>
+                            <tr>
+                                <td>:not(selector)</td>
+                                <td>:not(p)</td>
+                                <td>Seleciona todos os elementos que não são um &lt;p&gt; elemento</td>
+                            </tr>
+                            <tr>
+                                <td>:nth-child(n)</td>
+                                <td>p:nth-child(2)</td>
+                                <td>Seleciona cada &lt;p&gt; elemento que é o segundo filho de seu pai</td>
+                            </tr>
+                            <tr>
+                                <td>:nth-last-child(n)</td>
+                                <td>p:nth-last-child(2)</td>
+                                <td>Seleciona cada &lt;p&gt; elemento que é o segundo filho de seu pai, contando
+                                    do último filho</td>
+                            </tr>
+                            <tr>
+                                <td>:nth-last-of-type(n)</td>
+                                <td>p:nth-last-of-type(2)</td>
+                                <td>Seleciona cada &lt;p&gt; elemento que é o segundo &lt;p&gt; elemento de seu pai,
+                                    contando do último filho</td>
+                            </tr>
+                            <tr>
+                                <td>:nth-of-type(n)</td>
+                                <td>p:nth-of-type(2)</td>
+                                <td>Seleciona cada &lt;p&gt; elemento que é o segundo &lt;p&gt; elemento de seu pai
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>:only-of-type</td>
+                                <td>p:only-of-type</td>
+                                <td>Seleciona cada &lt;p&gt; elemento que é o único &lt;p&gt; elemento de seu pai
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>:only-child</td>
+                                <td>p:only-child</td>
+                                <td>Seleciona cada &lt;p&gt; elemento que é o único filho de seu pai</td>
+                            </tr>
+                            <tr>
+                                <td>:optional</td>
+                                <td>input:optional</td>
+                                <td>Seleciona &lt;entrada&gt; elementos sem atributo "obrigatório"</td>
+                            </tr>
+                            <tr>
+                                <td>:out-of-range</td>
+                                <td>input:out-of-range</td>
+                                <td>Seleciona &lt;entrada&gt; elementos com um valor fora de um intervalo especificado
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>:read-only</td>
+                                <td>input:read-only</td>
+                                <td>Seleciona &lt;entrada&gt; elementos com um atributo "readonly" especificado</td>
+                            </tr>
+                            <tr>
+                                <td>:read-write</td>
+                                <td>input:read-write</td>
+                                <td>Seleciona &lt;entrada&gt; elementos sem atributo "readonly"</td>
+                            </tr>
+                            <tr>
+                                <td>:required</td>
+                                <td>input:required</td>
+                                <td>Seleciona &lt;entrada&gt; elementos com um atributo "obrigatório" especificado</td>
+                            </tr>
+                            <tr>
+                                <td>:root</td>
+                                <td>root</td>
+                                <td>Seleciona o elemento raiz do documento</td>
+                            </tr>
+                            <tr>
+                                <td>:target</td>
+                                <td>#news:target</td>
+                                <td>Seleciona o elemento #news ativo atual (clicou em um URL que contém essa âncora
+                                    nome)</td>
+                            </tr>
+                            <tr>
+                                <td>:valid</td>
+                                <td>input:valid</td>
+                                <td>Seleciona todas as &lt;entradas&gt; elementos com um valor válido</td>
+                            </tr>
+                            <tr>
+                                <td>:visited</td>
+                                <td>a:visited</td>
+                                <td>Seleciona todos os links visitados</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Seletores pseudo-elementos</h2>
+
+                    <p>O que são pseudo-elementos?</p>
+                    <p>Um pseudo-elemento CSS é usado para estilizar partes especificadas de um elemento.</p>
+
+                    <p>Por exemplo, pode ser usado para:</p>
+
+                    <ul>
+                        <li>Estilize a primeira letra, ou linha, de um elemento</li>
+                        <li>Inserir conteúdo antes ou depois do conteúdo de um elemento</li>
+                    </ul>
+
+                    <h3>Sintaxe</h3>
+                    <p>A sintaxe dos pseudo-elementos:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+selector::pseudo-element {
+    property: value;
+}
+
+</code></pre>
+                    </div>
+
+
+                    <p>O <strong>::Pseudo-elemento</strong> de primeira linha</p>
+                    <p>O <strong>::first-line</strong> pseudo-elemento é usado para adicionar um estilo especial à
+                        primeira linha de um texto.</p>
+
+                    <p>O exemplo a seguir formata a primeira linha do texto em todos os elementos
+                        <strong>&lt;p&gt;</strong>:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p::first-line {
+    color: #ff0000;
+    font-variant: small-caps;
+}
+
+</code></pre>
+                    </div>
+
+                    <p><span class="text-color-green">Nota:</span> O <strong>::first-line</strong> pseudo-elemento só
+                        pode ser aplicado a elementos de nível de bloco.</p>
+
+                    <p>As seguintes propriedades se aplicam ao <strong>::first-line</strong> pseudo-elemento:</p>
+
+                    <ul>
+                        <li>propriedades da fonte</li>
+                        <li>propriedades de cor</li>
+                        <li>propriedades de fundo</li>
+                        <li>espaçamento entre palavras</li>
+                        <li>espaçamento entre letras</li>
+                        <li>decoração de texto</li>
+                        <li>alinhamento vertical</li>
+                        <li>transformação de texto</li>
+                        <li>altura da linha</li>
+                        <li>Claro</li>
+                    </ul>
+
+                    <p>Observe a notação de dois pontos - <strong>::first-line</strong> contra <strong>:first-line</strong></p>
+
+                    <p>
+                        Os dois pontos substituiu a notação de dois pontos para pseudo-elementos em CSS3. Esta foi uma
+                        tentativa do W3C de distinguir entre pseudo-classes e pseudo-elementos.
+                    </p>
+
+                    <p>A sintaxe de dois pontos foi usada para pseudoclasses e pseudo-elementos em CSS2 e CSS1.</p>
+
+                    <p>
+                        Para compatibilidade com versões anteriores, a sintaxe de dois pontos é aceitável para
+                        pseudo-elementos CSS2 e CSS1.
+                    </p>
+
+                    <h3>O pseudo-elemento ::first-letter</h3>
+                    <p>
+                        O <strong>::first-letter</strong> pseudo-elemento é usado para adicionar um estilo especial à primeira letra de um
+                        texto.
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo: o exemplo a seguir formata a primeira letra do texto em todos os elementos &lt;p&gt;.</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-html">
+p::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+</code></pre>
+                    </div>
+                        
+                        <p><span>Nota:</span> O <strong>::first-letter</strong> pseudo-elemento só pode ser aplicado a elementos de nível de bloco.</p>
+
+                        <p>As seguintes propriedades se aplicam ao pseudo-elemento <strong>::first-letter</strong>:</p>
+
+                        <ul>
+                            <li>propriedades da fonte</li>
+                            <li>propriedades de cor</li>
+                            <li>propriedades de fundo</li>
+                            <li>propriedades de margem</li>
+                            <li>propriedades de preenchimento</li>
+                            <li>propriedades da borda</li>
+                            <li>decoração de texto</li>
+                            <li>vertical-align (somente se "float" for "none")</li>
+                            <li>transformação de texto</li>
+                            <li>altura da linha</li>
+                            <li>flutuador</li>
+                            <li>Claro</li>
+                        </ul>
+                        <h3>Pseudo-elementos e classes HTML</h3>
+
+                        <p>Pseudo-elementos podem ser combinados com classes HTML:</p>
+
+                        <div class="col example">
+                            <p>Exemplo:</p>
+                            <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.intro::first-letter {
+    color: #ff0000;
+    font-size: 200%;
+}
+    
+    </code></pre>
+                        </div>
+                        
+                        <p>
+                            O exemplo acima exibirá a primeira letra dos parágrafos com class="intro", em vermelho e em
+                            tamanho maior.
+                        </p>
+
+                        <h3>Vários pseudo-elementos</h3>
+                        <p>Vários pseudo-elementos também podem ser combinados.</p>
+
+                        <p>
+                            No exemplo a seguir, a primeira letra de um parágrafo será vermelha, em um tamanho de fonte xx
+                            grande. O resto da primeira linha será azul e em versalete. O restante do parágrafo terá o
+                            tamanho e a cor da fonte padrão:
+                        </p>
+                        
+                        <div class="col example">
+                            <p>Exemplo:</p>
+                            <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+p::first-line {
+    color: #0000ff;
+    font-variant: small-caps;
+}
+    
+    </code></pre>
+                        </div>
+                        
+                        <h3>CSS - O pseudo-elemento ::before</h3>
+                        <p>
+                            O ::before pseudoelemento pode ser usado para inserir algum conteúdo antes do conteúdo de um
+                            elemento.
+                        </p>
+
+                        <div class="col example">
+                            <p>Exemplo: o exemplo a seguir insere uma imagem antes do conteúdo de cada elemento
+                    &lt;h1&gt;</p>
+                            <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+h1::before {
+    content: url(smiley.gif);
+}
+    
+    </code></pre>
+                        </div>
+                        
+                        <h3>CSS - O pseudo-elemento ::after</h3>
+                        <p>
+                            O ::after pseudo-elemento pode ser usado para inserir algum conteúdo após o conteúdo de um
+                            elemento.
+                        </p>
+
+                        <div class="col example">
+                            <p>Exemplo: o exemplo a seguir insere uma imagem após o conteúdo de cada elemento &lt;h1&gt;</p>
+                            <pre>
+                                <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+h1::after {
+    content: url(smiley.gif);
+}
+    
+    </code></pre>
+                        </div>
+                            
+                            <h3>CSS - O pseudo-elemento ::marker</h3>
+                            <p>O ::marker pseudo-elemento seleciona os marcadores dos itens da lista.</p>
+
+                            <div class="col example">
+                                <p>Exemplo: o exemplo a seguir estiliza os marcadores de itens de lista</p>
+                                <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+::marker {
+    color: red;
+    font-size: 23px;
+}
+        
+        </code></pre>
+                            </div>
+
+                            <h3>CSS - O pseudo-elemento ::selection</h3>
+                            <p>O ::selection pseudo-elemento corresponde à parte de um elemento selecionado por um usuário.</p>
+
+                            <p>
+                                As seguintes propriedades CSS podem ser aplicadas a ::selection: color, background, cursore
+                                outline.
+                            </p>
+
+                            <div class="col example">
+                                <p>Exemplo: o exemplo a seguir torna o texto selecionado vermelho em um fundo amarelo:</p>
+                                <pre>
+                                    <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+::selection {
+    color: red;
+    background: yellow;
+}
+        
+        </code></pre>
+                            </div>
+
+                            <h2>Todos os pseudo elementos CSS</h2>
+
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th style="width:20%">Seletor</th>
+                                        <th style="width:20%">Exemplo</th>
+                                        <th>Descrição do exemplo</th>
+                                    </tr>
+                                    <tr>
+                                        <td>::after</td>
+                                        <td>p::after</td>
+                                        <td>Insira o conteúdo após cada &lt;p&gt; elemento</td>
+                                    </tr>
+                                    <tr>
+                                        <td>::before</td>
+                                        <td>p::before</td>
+                                        <td>Insira o conteúdo antes de cada &lt;p&gt; elemento</td>
+                                    </tr>
+                                    <tr>
+                                        <td>::first-letter</td>
+                                        <td>p::first-letter</td>
+                                        <td>Seleciona a primeira letra de cada &lt;p&gt; elemento</td>
+                                    </tr>
+                                    <tr>
+                                        <td>::first-line</td>
+                                        <td>p::first-line</td>
+                                        <td>Seleciona a primeira linha de cada &lt;p&gt; elemento</td>
+                                    </tr>
+                                    <tr>
+                                        <td>::selection</td>
+                                        <td>p::selection</td>
+                                        <td>Seleciona a parte de um elemento que é selecionado por um usuário</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                </div>
+            </section>
+            <!-- End Section 1 -->
+
+        </div>
+        <div>
+            <footer>
+                <p>
+                    Autor: Vivaldo Roque
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../js/prism.js"></script>
+
+</body>
+
+</html>

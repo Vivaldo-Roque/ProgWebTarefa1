@@ -1,0 +1,22 @@
+.example {
+    align-self: center;
+    justify-self: center;
+    border-width: 5px;
+    border-style: hidden solid hidden solid;
+    border-color: var(--dark-green);
+    background-color: var(--white);
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.example p{
+    color: var(--black);
+    text-indent: 0;
+}
+
+strong{
+    color: var(--electric-pink);
+}

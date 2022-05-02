@@ -1,0 +1,217 @@
+/* formatacao da pagina  */
+
+/* Tamanhos de letra */
+
+* {
+    font-size: var(--all);
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+h6 {
+    font-size: var(--h6);
+}
+
+body {
+    margin: 0;
+    font-family: var(--letter-type);
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+body::after {
+    background-color: var(--white);
+    content: "";
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(30deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(150deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(30deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(150deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(60deg, var(--pattern-color2) 25%, transparent 25.5%, transparent 75%, var(--pattern-color2) 75%, var(--pattern-color2)), linear-gradient(60deg, var(--pattern-color2) 25%, transparent 25.5%, transparent 75%, var(--pattern-color2) 75%, var(--pattern-color2));
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;  
+}
+
+.container {
+    margin: auto;
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 10px 10px 10px 10px;
+    padding-top: 5rem;
+    /* Altura do cabecalho */
+    padding-bottom: 5rem;
+    /* Altura do rodape */
+}
+
+.content-aligment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--grey);
+    color: var(--white);
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--grey);
+    color: var(--white);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    text-indent: 0;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+section {
+    width: 55%;
+    background-color: var(--grey);
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 20px;
+}
+
+ul,
+ol {
+    text-align: left;
+    color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    color: var(--light-green);
+}
+
+a {
+    color: var(--dark-green);
+}
+
+strong {
+    color: var(--light-green);
+}
+
+p {
+    text-indent: 25px;
+    padding-left: 50px;
+    ;
+    padding-right: 50px;
+    ;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    color: var(--white);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+hr {
+    background-color: var(--black);
+}
+
+.m-x {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.m-x-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.m-y {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.m-y-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text-color-green {
+    color: var(--light-green);
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-left {
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.text-left h1,
+h2,
+h3 {
+    align-self: center;
+    justify-self: center;
+}

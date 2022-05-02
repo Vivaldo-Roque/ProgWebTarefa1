@@ -1,0 +1,62 @@
+.horario-table{
+    margin: 0 auto;
+}
+
+.horario-table tr th {
+
+    height: 25px;
+    padding: 25px 60px;
+    font-size: 13.5px;
+}
+
+.horario-table tr td {
+    position: relative;
+    padding: 25px 60px;
+    font-size: 13.5px;
+    height: 50px;
+}
+
+.inside-table {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    white-space: normal;
+}
+
+.r1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 100%;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #7F7F7F;
+}
+
+.r2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+}
+
+#horario {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: block;
+}
+
+#professor{
+    font-weight: bold;
+}
+
+body::after {
+    background-image: none;
+}
