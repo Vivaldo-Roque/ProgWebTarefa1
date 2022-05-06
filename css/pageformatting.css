@@ -42,16 +42,17 @@ body {
 body::after {
     background-color: var(--white);
     content: "";
-    opacity: 0.9;
+    /* opacity: 0.95; */
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: -1;
-    background-image: linear-gradient(30deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(150deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(30deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(150deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(60deg, var(--pattern-color2) 25%, transparent 25.5%, transparent 75%, var(--pattern-color2) 75%, var(--pattern-color2)), linear-gradient(60deg, var(--pattern-color2) 25%, transparent 25.5%, transparent 75%, var(--pattern-color2) 75%, var(--pattern-color2));
-    background-size: 80px 140px;
-    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;  
+    /* background-image: linear-gradient(30deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(150deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(30deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(150deg, var(--pattern-color1) 12%, transparent 12.5%, transparent 87%, var(--pattern-color1) 87.5%, var(--pattern-color1)), linear-gradient(60deg, var(--pattern-color2) 25%, transparent 25.5%, transparent 75%, var(--pattern-color2) 75%, var(--pattern-color2)), linear-gradient(60deg, var(--pattern-color2) 25%, transparent 25.5%, transparent 75%, var(--pattern-color2) 75%, var(--pattern-color2)); */
+    background-image: url("../img/backgrounds/matrix_rain_code.jpg");
+    /* background-size: 80px 140px; */
+    /* background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;   */
 }
 
 .container {
@@ -176,6 +177,10 @@ hr {
     background-color: var(--black);
 }
 
+.m-0 {
+    margin: 0;
+}
+
 .m-x {
     margin-left: 25px;
     margin-right: 25px;
@@ -198,6 +203,10 @@ hr {
 
 .text-color-green {
     color: var(--light-green);
+}
+
+.text-color-black {
+    color: var(--black);
 }
 
 .text-bold {

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/pageformatting.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="../css/code.css">
+    <link rel="stylesheet" href="../css/boxmodel.css">
+    <link rel="stylesheet" href="../css/mediaqueries.css">
+    <title>Box model</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <header>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#dropdown"> Tarefas &#11206;</a>
+                        <div class="dropdown-content">
+                            <a href="../pages/biblio.html">Autobiografia</a>
+                            <a href="../pages/eng-info.html">Engenharia informática</a>
+                            <a href="../pages/ens-super.html">Universidades e Institutos Superiores</a>
+                            <a href="../pages/descon.html">Tags e atributos descontinuados</a>
+                            <a href="../pages/novas-tags.html">Novas Tags e atributos</a>
+                            <a href="../pages/vid-mus.html">Video e Música</a>
+                            <a href="../pages/web3web4.html">Web 3 e Web 4</a>
+                            <a href="../pages/portais.html">Portais</a>
+                            <a href="../pages/horario.html">Horário</a>
+                            <a href="../pages/seletores.html">Selectores</a>
+                            <a href="../pages/cores.html">Formas de representação de cores</a>
+                            <a href="../pages/fontes.html">Tipos de fontes</a>
+                            <a href="../pages/bordas.html">Tipos de bordas</a>
+                            <a href="../pages/boxmodel.html">Box model</a>
+                        </div>
+                    </li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="content-wrap">
+
+            <!-- Start section 1 -->
+            <section>
+                <div class="content-aligment">
+
+                    <h2>Modelo de caixa CSS</h2>
+
+                    <p>Todos os elementos HTML podem ser considerados como caixas.</p>
+
+                    <h2>O modelo de caixa CSS</h2>
+
+                    <p>Em CSS, o termo "modelo de caixa" é usado quando se fala de design e layout.</p>
+
+                    <p>O modelo de caixa CSS é essencialmente uma caixa que envolve cada elemento HTML. Ele consiste em:
+                    </p>
+                    <p>margens, bordas, preenchimento e o conteúdo real. A imagem abaixo ilustra o modelo da caixa:</p>
+
+                    <div class="margin">
+                        <p>Margem</p>
+                        <div class="border">
+                            <p>Borda</p>
+                            <div class="padding">
+                                <p>Preenchimento</p>
+                                <div class="content">
+                                    <p>Conteúdo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>Explicação das diferentes partes:</p>
+
+                    <ul>
+                        <li>Conteúdo - O conteúdo da caixa, onde o texto e as imagens aparecem</li>
+                        <li>Preenchimento - Limpa uma área ao redor do conteúdo. O forro é transparente</li>
+                        <li>Borda - Uma borda que contorna o preenchimento e o conteúdo</li>
+                        <li> Margem - Limpa uma área fora da fronteira. A margem é transparente</li>
+                    </ul>
+                    <p>
+                        O modelo de caixa nos permite adicionar uma borda ao redor dos elementos e definir o espaço
+                        entre os
+                        elementos.
+                    </p>
+
+                    <h2>Largura e Altura de um Elemento</h2>
+                    <p>
+                        Para definir a largura e a altura de um elemento corretamente em todos os navegadores, você
+                        precisa
+                        saber como funciona o modelo de caixa.
+                    </p>
+
+                    <p>
+                        <span>Importante:</span> Ao definir as propriedades de largura e altura de um elemento com CSS,
+                        basta definir a
+                        largura e a altura da <span>rea de conteúdo</span>. Para calcular o tamanho total de um
+                        elemento, você também
+                        deve adicionar preenchimento, bordas e margens.
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo: Este elemento &lt;div&gt; terá uma largura total de 350px.</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+div {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+}
+</code></pre>
+                    </div>
+
+                    <p>Segue o cálculo:</p>
+
+                    <div class="col example text-left">
+                        <p>320px (largura)</p>
+                        <p>+ 20px (preenchimento esquerdo + direito)</p>
+                        <p>+ 10px (borda esquerda + direita)</p>
+                        <p>+ 0px (margem esquerda + direita)</p>
+                        <p><b>= 350px</b></p>
+                    </div>
+
+                    <p>A largura total de um elemento deve ser calculada assim:</p>
+
+                    <p>
+                        Largura total do elemento = largura + preenchimento esquerdo + preenchimento direito + borda
+                        esquerda + borda direita + margem esquerda + margem direita.
+                    </p>
+
+                    <p>A altura total de um elemento deve ser calculada assim:</p>
+
+                    <p>
+                        Altura total do elemento = altura + preenchimento superior + preenchimento inferior + borda superior
+                        + borda inferior + margem superior + margem inferior.
+                    </p>
+
+                </div>
+                <br>
+            </section>
+            <!-- End Section 1 -->
+
+        </div>
+        <div>
+            <footer>
+                <p>
+                    Autor: Vivaldo Roque
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../js/prism.js"></script>
+
+</body>
+
+</html>
