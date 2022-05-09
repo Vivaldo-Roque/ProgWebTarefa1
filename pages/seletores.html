@@ -12,10 +12,14 @@
     <link rel="stylesheet" href="../css/table.css">
     <link rel="stylesheet" href="../css/mediaqueries.css">
     <link rel="stylesheet" href="../css/prism.css">
+    <script src="../js/matrix.js"></script>
     <title>Selectores CSS</title>
 </head>
 
 <body>
+
+    <canvas width="800" height="800" id="canvas" style="position: fixed; z-index: -1;"> </canvas>
+
     <div class="container">
 
         <div>
@@ -38,6 +42,7 @@
                             <a href="../pages/cores.html">Formas de representação de cores</a>
                             <a href="../pages/fontes.html">Tipos de fontes</a>
                             <a href="../pages/bordas.html">Tipos de bordas</a>
+                            <a href="../pages/boxmodel.html">Box model</a>
                         </div>
                     </li>
                 </ul>
@@ -212,6 +217,48 @@ h1, h2, p {
                             </pre>
                     </div>
 
+                    <h2>Todos os seletores simples</h2>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th style="width:20%">Seletor</th>
+                                <th style="width:20%">Exemplo</th>
+                                <th>Descrição do exemplo</th>
+                            </tr>
+                            <tr>
+                                <td>#<i>id</i></td>
+                                <td>#primeironome</td>
+                                <td>Seleciona o elemento com id="primeironome"</td>
+                            </tr>
+                            <tr>
+                                <td>.<i>classe</i></td>
+                                <td>.intro</td>
+                                <td>Seleciona todos os elementos com class="intro"</td>
+                            </tr>
+                            <tr>
+                                <td><em>elemento.classe</em></td>
+                                <td>p.intro</td>
+                                <td>Seleciona apenas elementos &lt;p&gt; com class="intro"</td>
+                            </tr>
+                            <tr>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>Seleciona todos os elementos</td>
+                            </tr>
+                            <tr>
+                                <td><i>elemento</i></td>
+                                <td>p</td>
+                                <td>Seleciona todos os elementos &lt;p&gt;</td>
+                            </tr>
+                            <tr>
+                                <td><i>elemento,elemento,..</i></td>
+                                <td>div, p</td>
+                                <td>Seleciona todos os elementos &lt;div&gt; e todos os elementos &lt;p&gt;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <h2>Seletores de combinação/composto</h2>
 
                     <p>Um combinador é algo que explica a relação entre os seletores.</p>
@@ -307,6 +354,39 @@ div ~ p {
 }</code>
                                             </pre>
                     </div>
+
+                    <h2>Todos os seletores de combinação</h2>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th style="width:25%">Seletor</th>
+                                <th style="width:15%">Exemplo</th>
+                                <th>Descrição do exemplo</th>
+                            </tr>
+                            <tr>
+                                <td><i>elemento elemento</i></td>
+                                <td>div p</td>
+                                <td>Seleciona todos os elementos &lt;p&gt; dentro dos elementos &lt;div&gt;</td>
+                            </tr>
+                            <tr>
+                                <td><i>elemento&gt;elemento</i></td>
+                                <td>div &gt; p</td>
+                                <td>Seleciona todos os elementos &lt;p&gt; em que o pai é um elemento &lt;div&gt;</td>
+                            </tr>
+                            <tr>
+                                <td><i>elemento+elemento</i></td>
+                                <td>div + p</td>
+                                <td>Seleciona o primeiro elemento &lt;p&gt; que é colocado imediatamente após os
+                                    elementos &lt;div&gt;</td>
+                            </tr>
+                            <tr>
+                                <td><i>elemento1~elemento2</i></td>
+                                <td>p ~ ul</td>
+                                <td>Seleciona cada elemento &lt;ul&gt; que são precedidos por um elemento &lt;p&gt;</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <h2>Seletores de atributos</h2>
 
@@ -462,6 +542,54 @@ input[type="button"] {
                                                     </pre>
                     </div>
 
+                    <h2>Todos os seletores de atributos</h2>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th style="width:20%">Seletor</th>
+                                <th style="width:20%">Exemplo</th>
+                                <th>Descrição do exemplo</th>
+                            </tr>
+                            <tr>
+                                <td>[<i>atributo</i>]</td>
+                                <td>[target]</td>
+                                <td>Seleciona todos os elementos com um atributo de destino</td>
+                            </tr>
+                            <tr>
+                                <td>[<i>atributo</i>=<i>valor</i>]</td>
+                                <td>[target=_blank]</td>
+                                <td>Seleciona todos os elementos com target="_blank"</td>
+                            </tr>
+                            <tr>
+                                <td>[<i>atributo</i>~=<i>valor</i>]
+                                </td>
+                                <td>[title~=flower]</td>
+                                <td>Seleciona todos os elementos com um atributo title contendo a palavra "flor"</td>
+                            </tr>
+                            <tr>
+                                <td>[<i>atributo</i>|=<i>valor</i>]
+                                </td>
+                                <td>[lang|=en]</td>
+                                <td>Seleciona todos os elementos com um valor de atributo lang começando com "en"</td>
+                            </tr>
+                            <tr>
+                                <td>[<i>atributo</i>^=<i>valor</i>]</td>
+                                <td>a[href^="https"]</td>
+                                <td>Seleciona cada elemento &lt;a&gt; cujo valor de atributo href começa com "https"</td>
+                            </tr>
+                            <tr>
+                                <td>[<i>atributo</i>$=<i>valor</i>]</td>
+                                <td>a[href$=".pdf"]</td>
+                                <td>Seleciona cada elemento &lt;a&gt; cujo valor de atributo href termina com ".pdf"</td>
+                            </tr>
+                            <tr>
+                                <td>[<i>atributo</i>*=<i>valor</i>]</td>
+                                <td>a[href*="w3schools"]</td>
+                                <td>Seleciona cada elemento &lt;a&gt; cujo valor de atributo href contém a substring "w3escolas"</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <h2>Seletores pseudo-classe</h2>
 
@@ -683,38 +811,38 @@ q:lang(no) {
                             <tr>
                                 <td>:checked</td>
                                 <td>input:checked</td>
-                                <td>Seleciona cada &lt;input&gt; elemento</td>
+                                <td>Seleciona todos os elementos &lt;input&gt;</td>
                             </tr>
                             <tr>
                                 <td>:disabled</td>
                                 <td>input:disabled</td>
-                                <td>Seleciona todas as &lt;input&gt; elemento</td>
+                                <td>Seleciona todos os elementos &lt;input&gt;</td>
                             </tr>
                             <tr>
                                 <td>:empty</td>
                                 <td>p:empty</td>
-                                <td>Seleciona cada &lt;p&gt; elemento que não tem filhos</td>
+                                <td>Seleciona todos os elementos &lt;p&gt; que não tem filhos</td>
                             </tr>
                             <tr>
                                 <td>:enabled</td>
                                 <td>input:enabled</td>
-                                <td>Seleciona todas as &lt;input&gt; elemento</td>
+                                <td>Seleciona todos os elementos &lt;input&gt;</td>
                             </tr>
                             <tr>
                                 <td>:first-child</td>
                                 <td>p:first-child</td>
-                                <td>Seleciona cada &lt;p&gt; elementos que é o primeiro filho de seu pai</td>
+                                <td>Seleciona todos os elementos &lt;p&gt; que é o primeiro filho de seu pai</td>
                             </tr>
                             <tr>
                                 <td>:first-of-type</td>
                                 <td>p:first-of-type</td>
-                                <td>Seleciona cada &lt;p&gt; elemento que é o primeiro &lt;p&gt; elemento de seu pai
+                                <td>Seleciona todos os elementos &lt;p&gt; que é o primeiro elemento &lt;p&gt; de seu pai
                                 </td>
                             </tr>
                             <tr>
                                 <td>:focus</td>
                                 <td>input:focus</td>
-                                <td>Seleciona a &lt;entrada&gt; elemento que tem foco</td>
+                                <td>Seleciona o elemento &lt;entrada&gt; que tem foco</td>
                             </tr>
                             <tr>
                                 <td>:hover</td>
@@ -724,29 +852,29 @@ q:lang(no) {
                             <tr>
                                 <td>:in-range</td>
                                 <td>input:in-range</td>
-                                <td>Seleciona &lt;entrada&gt; elementos com um valor dentro de um intervalo especificado
+                                <td>Seleciona elementos &lt;entrada&gt; com um valor dentro de um intervalo especificado
                                 </td>
                             </tr>
                             <tr>
                                 <td>:invalid</td>
                                 <td>input:invalid</td>
-                                <td>Seleciona todas as &lt;entradas&gt; elementos com valor inválido</td>
+                                <td>Seleciona todos os elementos &lt;entradas&gt; com valor inválido</td>
                             </tr>
                             <tr>
                                 <td>:lang(<i>language</i>)</td>
                                 <td>p:lang(it)</td>
-                                <td>Seleciona cada &lt;p&gt; elemento com um valor de atributo lang começando com "it"
+                                <td>Seleciona cada elemento &lt;p&gt; com um valor de atributo lang começando com "it"
                                 </td>
                             </tr>
                             <tr>
                                 <td>:last-child</td>
                                 <td>p:last-child</td>
-                                <td>Seleciona cada &lt;p&gt; elementos que é o último filho de seu pai</td>
+                                <td>Seleciona todos os elementos &lt;p&gt; que é o último filho de seu pai</td>
                             </tr>
                             <tr>
                                 <td>:last-of-type</td>
                                 <td>p:last-of-type</td>
-                                <td>Seleciona cada &lt;p&gt; elemento que é o último &lt;p&gt; elemento de seu pai
+                                <td>Seleciona cada elemento &lt;p&gt; que é o último elemento &lt;p&gt; de seu pai
                                 </td>
                             </tr>
                             <tr>
@@ -757,67 +885,67 @@ q:lang(no) {
                             <tr>
                                 <td>:not(selector)</td>
                                 <td>:not(p)</td>
-                                <td>Seleciona todos os elementos que não são um &lt;p&gt; elemento</td>
+                                <td>Seleciona todos os elementos que não são um elemento &lt;p&gt;</td>
                             </tr>
                             <tr>
                                 <td>:nth-child(n)</td>
                                 <td>p:nth-child(2)</td>
-                                <td>Seleciona cada &lt;p&gt; elemento que é o segundo filho de seu pai</td>
+                                <td>Seleciona cada elemento &lt;p&gt; que é o segundo filho de seu pai</td>
                             </tr>
                             <tr>
                                 <td>:nth-last-child(n)</td>
                                 <td>p:nth-last-child(2)</td>
-                                <td>Seleciona cada &lt;p&gt; elemento que é o segundo filho de seu pai, contando
+                                <td>Seleciona cada elemento &lt;p&gt; que é o segundo filho de seu pai, contando
                                     do último filho</td>
                             </tr>
                             <tr>
                                 <td>:nth-last-of-type(n)</td>
                                 <td>p:nth-last-of-type(2)</td>
-                                <td>Seleciona cada &lt;p&gt; elemento que é o segundo &lt;p&gt; elemento de seu pai,
+                                <td>Seleciona cada elemento &lt;p&gt; que é o segundo elemento &lt;p&gt; de seu pai,
                                     contando do último filho</td>
                             </tr>
                             <tr>
                                 <td>:nth-of-type(n)</td>
                                 <td>p:nth-of-type(2)</td>
-                                <td>Seleciona cada &lt;p&gt; elemento que é o segundo &lt;p&gt; elemento de seu pai
+                                <td>Seleciona cada elemento &lt;p&gt; que é o segundo elemento &lt;p&gt; de seu pai
                                 </td>
                             </tr>
                             <tr>
                                 <td>:only-of-type</td>
                                 <td>p:only-of-type</td>
-                                <td>Seleciona cada &lt;p&gt; elemento que é o único &lt;p&gt; elemento de seu pai
+                                <td>Seleciona cada elemento &lt;p&gt; que é o único elemento &lt;p&gt; de seu pai
                                 </td>
                             </tr>
                             <tr>
                                 <td>:only-child</td>
                                 <td>p:only-child</td>
-                                <td>Seleciona cada &lt;p&gt; elemento que é o único filho de seu pai</td>
+                                <td>Seleciona cada  elemento &lt;p&gt; que é o único filho de seu pai</td>
                             </tr>
                             <tr>
                                 <td>:optional</td>
                                 <td>input:optional</td>
-                                <td>Seleciona &lt;entrada&gt; elementos sem atributo "obrigatório"</td>
+                                <td>Seleciona todos os elementos &lt;entrada&gt; sem atributo "obrigatório"</td>
                             </tr>
                             <tr>
                                 <td>:out-of-range</td>
                                 <td>input:out-of-range</td>
-                                <td>Seleciona &lt;entrada&gt; elementos com um valor fora de um intervalo especificado
+                                <td>Seleciona todos os elementos &lt;entrada&gt; com um valor fora de um intervalo especificado
                                 </td>
                             </tr>
                             <tr>
                                 <td>:read-only</td>
                                 <td>input:read-only</td>
-                                <td>Seleciona &lt;entrada&gt; elementos com um atributo "readonly" especificado</td>
+                                <td>Seleciona todos os elementos &lt;entrada&gt; com um atributo "readonly" especificado</td>
                             </tr>
                             <tr>
                                 <td>:read-write</td>
                                 <td>input:read-write</td>
-                                <td>Seleciona &lt;entrada&gt; elementos sem atributo "readonly"</td>
+                                <td>Seleciona todos os elementos &lt;entrada&gt; sem atributo "readonly"</td>
                             </tr>
                             <tr>
                                 <td>:required</td>
                                 <td>input:required</td>
-                                <td>Seleciona &lt;entrada&gt; elementos com um atributo "obrigatório" especificado</td>
+                                <td>Seleciona todos os elementos &lt;entrada&gt; com um atributo "obrigatório" especificado</td>
                             </tr>
                             <tr>
                                 <td>:root</td>
@@ -833,7 +961,7 @@ q:lang(no) {
                             <tr>
                                 <td>:valid</td>
                                 <td>input:valid</td>
-                                <td>Seleciona todas as &lt;entradas&gt; elementos com um valor válido</td>
+                                <td>Seleciona todos os elementos &lt;entradas&gt; com um valor válido</td>
                             </tr>
                             <tr>
                                 <td>:visited</td>
@@ -875,7 +1003,8 @@ selector::pseudo-element {
                         primeira linha de um texto.</p>
 
                     <p>O exemplo a seguir formata a primeira linha do texto em todos os elementos
-                        <strong>&lt;p&gt;</strong>:</p>
+                        <strong>&lt;p&gt;</strong>:
+                    </p>
 
                     <div class="col example">
                         <p>Exemplo:</p>
@@ -907,7 +1036,9 @@ p::first-line {
                         <li>Claro</li>
                     </ul>
 
-                    <p>Observe a notação de dois pontos - <strong>::first-line</strong> contra <strong>:first-line</strong></p>
+                    <p>Observe a notação de dois pontos - <strong>::first-line</strong> contra
+                        <strong>:first-line</strong>
+                    </p>
 
                     <p>
                         Os dois pontos substituiu a notação de dois pontos para pseudo-elementos em CSS3. Esta foi uma
@@ -923,12 +1054,14 @@ p::first-line {
 
                     <h3>O pseudo-elemento ::first-letter</h3>
                     <p>
-                        O <strong>::first-letter</strong> pseudo-elemento é usado para adicionar um estilo especial à primeira letra de um
+                        O <strong>::first-letter</strong> pseudo-elemento é usado para adicionar um estilo especial à
+                        primeira letra de um
                         texto.
                     </p>
 
                     <div class="col example">
-                        <p>Exemplo: o exemplo a seguir formata a primeira letra do texto em todos os elementos &lt;p&gt;.</p>
+                        <p>Exemplo: o exemplo a seguir formata a primeira letra do texto em todos os elementos
+                            &lt;p&gt;.</p>
                         <pre>
                             <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-html">
 p::first-letter {
@@ -938,32 +1071,33 @@ p::first-letter {
 
 </code></pre>
                     </div>
-                        
-                        <p><span>Nota:</span> O <strong>::first-letter</strong> pseudo-elemento só pode ser aplicado a elementos de nível de bloco.</p>
 
-                        <p>As seguintes propriedades se aplicam ao pseudo-elemento <strong>::first-letter</strong>:</p>
+                    <p><span>Nota:</span> O <strong>::first-letter</strong> pseudo-elemento só pode ser aplicado a
+                        elementos de nível de bloco.</p>
 
-                        <ul>
-                            <li>propriedades da fonte</li>
-                            <li>propriedades de cor</li>
-                            <li>propriedades de fundo</li>
-                            <li>propriedades de margem</li>
-                            <li>propriedades de preenchimento</li>
-                            <li>propriedades da borda</li>
-                            <li>decoração de texto</li>
-                            <li>vertical-align (somente se "float" for "none")</li>
-                            <li>transformação de texto</li>
-                            <li>altura da linha</li>
-                            <li>flutuador</li>
-                            <li>Claro</li>
-                        </ul>
-                        <h3>Pseudo-elementos e classes HTML</h3>
+                    <p>As seguintes propriedades se aplicam ao pseudo-elemento <strong>::first-letter</strong>:</p>
 
-                        <p>Pseudo-elementos podem ser combinados com classes HTML:</p>
+                    <ul>
+                        <li>propriedades da fonte</li>
+                        <li>propriedades de cor</li>
+                        <li>propriedades de fundo</li>
+                        <li>propriedades de margem</li>
+                        <li>propriedades de preenchimento</li>
+                        <li>propriedades da borda</li>
+                        <li>decoração de texto</li>
+                        <li>vertical-align (somente se "float" for "none")</li>
+                        <li>transformação de texto</li>
+                        <li>altura da linha</li>
+                        <li>flutuador</li>
+                        <li>Claro</li>
+                    </ul>
+                    <h3>Pseudo-elementos e classes HTML</h3>
 
-                        <div class="col example">
-                            <p>Exemplo:</p>
-                            <pre>
+                    <p>Pseudo-elementos podem ser combinados com classes HTML:</p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
                                 <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
 p.intro::first-letter {
     color: #ff0000;
@@ -971,25 +1105,25 @@ p.intro::first-letter {
 }
     
     </code></pre>
-                        </div>
-                        
-                        <p>
-                            O exemplo acima exibirá a primeira letra dos parágrafos com class="intro", em vermelho e em
-                            tamanho maior.
-                        </p>
+                    </div>
 
-                        <h3>Vários pseudo-elementos</h3>
-                        <p>Vários pseudo-elementos também podem ser combinados.</p>
+                    <p>
+                        O exemplo acima exibirá a primeira letra dos parágrafos com class="intro", em vermelho e em
+                        tamanho maior.
+                    </p>
 
-                        <p>
-                            No exemplo a seguir, a primeira letra de um parágrafo será vermelha, em um tamanho de fonte xx
-                            grande. O resto da primeira linha será azul e em versalete. O restante do parágrafo terá o
-                            tamanho e a cor da fonte padrão:
-                        </p>
-                        
-                        <div class="col example">
-                            <p>Exemplo:</p>
-                            <pre>
+                    <h3>Vários pseudo-elementos</h3>
+                    <p>Vários pseudo-elementos também podem ser combinados.</p>
+
+                    <p>
+                        No exemplo a seguir, a primeira letra de um parágrafo será vermelha, em um tamanho de fonte xx
+                        grande. O resto da primeira linha será azul e em versalete. O restante do parágrafo terá o
+                        tamanho e a cor da fonte padrão:
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo:</p>
+                        <pre>
                                 <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
 p::first-letter {
     color: #ff0000;
@@ -1002,49 +1136,51 @@ p::first-line {
 }
     
     </code></pre>
-                        </div>
-                        
-                        <h3>CSS - O pseudo-elemento ::before</h3>
-                        <p>
-                            O <strong>::before</strong> pseudoelemento pode ser usado para inserir algum conteúdo antes do conteúdo de um
-                            elemento.
-                        </p>
+                    </div>
 
-                        <div class="col example">
-                            <p>Exemplo: o exemplo a seguir insere uma imagem antes do conteúdo de cada elemento
-                    &lt;h1&gt;</p>
-                            <pre>
+                    <h3>CSS - O pseudo-elemento ::before</h3>
+                    <p>
+                        O <strong>::before</strong> pseudoelemento pode ser usado para inserir algum conteúdo antes do
+                        conteúdo de um
+                        elemento.
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo: o exemplo a seguir insere uma imagem antes do conteúdo de cada elemento
+                            &lt;h1&gt;</p>
+                        <pre>
                                 <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
 h1::before {
     content: url(smiley.gif);
 }
     
     </code></pre>
-                        </div>
-                        
-                        <h3>CSS - O pseudo-elemento ::after</h3>
-                        <p>
-                            O <strong>::after</strong> pseudo-elemento pode ser usado para inserir algum conteúdo após o conteúdo de um
-                            elemento.
-                        </p>
+                    </div>
 
-                        <div class="col example">
-                            <p>Exemplo: o exemplo a seguir insere uma imagem após o conteúdo de cada elemento &lt;h1&gt;</p>
-                            <pre>
+                    <h3>CSS - O pseudo-elemento ::after</h3>
+                    <p>
+                        O <strong>::after</strong> pseudo-elemento pode ser usado para inserir algum conteúdo após o
+                        conteúdo de um
+                        elemento.
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo: o exemplo a seguir insere uma imagem após o conteúdo de cada elemento &lt;h1&gt;</p>
+                        <pre>
                                 <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
 h1::after {
     content: url(smiley.gif);
 }
     
     </code></pre>
-                        </div>
-                            
-                            <h3>CSS - O pseudo-elemento ::marker</h3>
-                            <p>O <strong>::marker</strong> pseudo-elemento seleciona os marcadores dos itens da lista.</p>
+                    </div>
 
-                            <div class="col example">
-                                <p>Exemplo: o exemplo a seguir estiliza os marcadores de itens de lista</p>
-                                <pre>
+                    <h3>CSS - O pseudo-elemento ::marker</h3>
+                    <p>O <strong>::marker</strong> pseudo-elemento seleciona os marcadores dos itens da lista.</p>
+
+                    <div class="col example">
+                        <p>Exemplo: o exemplo a seguir estiliza os marcadores de itens de lista</p>
+                        <pre>
                                     <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
 ::marker {
     color: red;
@@ -1052,19 +1188,21 @@ h1::after {
 }
         
         </code></pre>
-                            </div>
+                    </div>
 
-                            <h3>CSS - O pseudo-elemento ::selection</h3>
-                            <p>O <strong>::selection</strong> pseudo-elemento corresponde à parte de um elemento selecionado por um usuário.</p>
+                    <h3>CSS - O pseudo-elemento ::selection</h3>
+                    <p>O <strong>::selection</strong> pseudo-elemento corresponde à parte de um elemento selecionado por
+                        um usuário.</p>
 
-                            <p>
-                                As seguintes propriedades CSS podem ser aplicadas a <strong>::selection</strong>: color, background, cursore
-                                outline.
-                            </p>
+                    <p>
+                        As seguintes propriedades CSS podem ser aplicadas a <strong>::selection</strong>: color,
+                        background, cursore
+                        outline.
+                    </p>
 
-                            <div class="col example">
-                                <p>Exemplo: o exemplo a seguir torna o texto selecionado vermelho em um fundo amarelo:</p>
-                                <pre>
+                    <div class="col example">
+                        <p>Exemplo: o exemplo a seguir torna o texto selecionado vermelho em um fundo amarelo:</p>
+                        <pre>
                                     <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
 ::selection {
     color: red;
@@ -1072,44 +1210,44 @@ h1::after {
 }
         
         </code></pre>
-                            </div>
+                    </div>
 
-                            <h2>Todos os pseudo elementos CSS</h2>
+                    <h2>Todos os pseudo elementos CSS</h2>
 
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th style="width:20%">Seletor</th>
-                                        <th style="width:20%">Exemplo</th>
-                                        <th>Descrição do exemplo</th>
-                                    </tr>
-                                    <tr>
-                                        <td>::after</td>
-                                        <td>p::after</td>
-                                        <td>Insira o conteúdo após cada &lt;p&gt; elemento</td>
-                                    </tr>
-                                    <tr>
-                                        <td>::before</td>
-                                        <td>p::before</td>
-                                        <td>Insira o conteúdo antes de cada &lt;p&gt; elemento</td>
-                                    </tr>
-                                    <tr>
-                                        <td>::first-letter</td>
-                                        <td>p::first-letter</td>
-                                        <td>Seleciona a primeira letra de cada &lt;p&gt; elemento</td>
-                                    </tr>
-                                    <tr>
-                                        <td>::first-line</td>
-                                        <td>p::first-line</td>
-                                        <td>Seleciona a primeira linha de cada &lt;p&gt; elemento</td>
-                                    </tr>
-                                    <tr>
-                                        <td>::selection</td>
-                                        <td>p::selection</td>
-                                        <td>Seleciona a parte de um elemento que é selecionado por um usuário</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th style="width:20%">Seletor</th>
+                                <th style="width:20%">Exemplo</th>
+                                <th>Descrição do exemplo</th>
+                            </tr>
+                            <tr>
+                                <td>::after</td>
+                                <td>p::after</td>
+                                <td>Insira o conteúdo após cada elemento &lt;p&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>::before</td>
+                                <td>p::before</td>
+                                <td>Insira o conteúdo antes de cada elemento &lt;p&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>::first-letter</td>
+                                <td>p::first-letter</td>
+                                <td>Seleciona a primeira letra de cada elemento &lt;p&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>::first-line</td>
+                                <td>p::first-line</td>
+                                <td>Seleciona a primeira linha de cada elemento &lt;p&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>::selection</td>
+                                <td>p::selection</td>
+                                <td>Seleciona a parte de um elemento que é selecionado por um usuário</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
 
                 </div>

@@ -13,10 +13,14 @@
     <link rel="stylesheet" href="../css/fontes.css">
     <link rel="stylesheet" href="../css/prism.css">
     <link rel="stylesheet" href="../css/mediaqueries.css">
+    <script src="../js/matrix.js"></script>
     <title>Tipos de fontes</title>
 </head>
 
 <body>
+
+    <canvas width="800" height="800" id="canvas" style="position: fixed; z-index: -1;"> </canvas>
+
     <div class="container">
 
         <div>
@@ -39,6 +43,7 @@
                             <a href="../pages/cores.html">Formas de representação de cores</a>
                             <a href="../pages/fontes.html">Tipos de fontes</a>
                             <a href="../pages/bordas.html">Tipos de bordas</a>
+                            <a href="../pages/boxmodel.html">Box model</a>
                         </div>
                     </li>
                 </ul>
@@ -71,19 +76,22 @@
 
                     <ul>
                         <li>
-                            As fontes <b class="text-color-green">com serifa</b> têm um pequeno traço nas bordas de cada letra. Eles criam uma
+                            As fontes <b class="text-color-green">com serifa</b> têm um pequeno traço nas bordas de cada
+                            letra. Eles criam uma
                             sensação
                             de
                             formalidade e elegância.
                         </li>
                         <li>
-                            As fontes <b class="text-color-green">sem serifa</b> têm linhas limpas (sem pequenos traços anexados). Eles criam um
+                            As fontes <b class="text-color-green">sem serifa</b> têm linhas limpas (sem pequenos traços
+                            anexados). Eles criam um
                             visual
                             moderno
                             e minimalista.
                         </li>
                         <li>
-                            Fontes <b class="text-color-green">monoespaçadas</b> - aqui todas as letras têm a mesma largura fixa. Eles criam uma
+                            Fontes <b class="text-color-green">monoespaçadas</b> - aqui todas as letras têm a mesma
+                            largura fixa. Eles criam uma
                             aparência
                             mecânica.
                         </li>
@@ -420,8 +428,10 @@ p.small {
                         pareçam parágrafos.
                     </p>
 
-                    <p>Sempre use as tags HTML apropriadas, como <strong>&lt;h1&gt;</strong> - <strong>&lt;h6&gt;</strong> para títulos e <strong>&lt;p&gt;</strong> para
-                        parágrafos.</p>
+                    <p>Sempre use as tags HTML apropriadas, como <strong>&lt;h1&gt;</strong> -
+                        <strong>&lt;h6&gt;</strong> para títulos e <strong>&lt;p&gt;</strong> para
+                        parágrafos.
+                    </p>
 
                     <p>O valor do tamanho da fonte pode ser um tamanho absoluto ou relativo.</p>
 
@@ -584,7 +594,79 @@ p {
                         janela de visualização tiver 50 cm de largura, 1vw é 0,5 cm.
                     </p>
 
-                    
+                    <h2>Propriedade da fonte</h2>
+
+                    <p>
+                        Para encurtar o código, também é possível especificar todas as propriedades de fonte individuais
+                        em
+                        uma propriedade.
+                    </p>
+
+                    <p>A propriedade <strong>font</strong> é uma propriedade abreviada para:</p>
+
+                    <ul>
+                        <li><strong>font-style</strong></li>
+                        <li><strong>font-variant</strong></li>
+                        <li><strong>font-weight</strong></li>
+                        <li><strong>font-size/line-height</strong></li>
+                        <li><strong>font-family</strong></li>
+                    </ul>
+                    <p>
+                        <span>Nota:</span> Os valores <strong>font-size</strong> e <strong>font-family</strong> são
+                        obrigatórios. Se um dos outros valores estiver ausente,
+                        seu valor padrão será usado.
+                    </p>
+
+                    <div class="col example">
+                        <p>Exemplo: Use <strong>font</strong> para definir várias propriedades de fonte em uma
+                            declaração.</p>
+                        <pre>
+                            <code data-prismjs-copy="Copiar" data-prismjs-copy-success="Copiado!" class="language-css">
+p.a {
+    font: 20px Arial, sans-serif;
+}
+
+p.b {
+    font: italic small-caps bold 12px/30px Georgia, serif;
+}
+
+</code></pre>
+                    </div>
+
+                    <h2>Todas as propriedades da fonte</h2>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th style="width:25%">Propriedade</th>
+                                <th>Descrição</th>
+                            </tr>
+                            <tr>
+                                <td>font</td>
+                                <td>Define todas as propriedades da fonte em uma declaração</td>
+                            </tr>
+                            <tr>
+                                <td>font-family</td>
+                                <td>Especifica a família de fontes para texto</td>
+                            </tr>
+                            <tr>
+                                <td>font-size</td>
+                                <td>Especifica o tamanho da fonte do texto</td>
+                            </tr>
+                            <tr>
+                                <td>font-style</td>
+                                <td>Especifica o estilo da fonte para o texto</td>
+                            </tr>
+                            <tr>
+                                <td>font-variant</td>
+                                <td>Especifica se um texto deve ou não ser exibido em uma fonte de versalete</td>
+                            </tr>
+                            <tr>
+                                <td>font-weight</td>
+                                <td>Especifica o peso de uma fonte</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </div>
             </section>

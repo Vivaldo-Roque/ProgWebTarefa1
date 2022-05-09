@@ -9,13 +9,18 @@
     <link rel="stylesheet" href="../css/pageformatting.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/code.css">
-    <link rel="stylesheet" href="../css/mediaqueries.css">
-    <link rel="stylesheet" href="../css/prism.css">
     <link rel="stylesheet" href="../css/border.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="../css/mediaqueries.css">
+    <script src="../js/matrix.js"></script>
     <title>Tipos de bordas</title>
 </head>
 
 <body>
+
+    <canvas width="800" height="800" id="canvas" style="position: fixed; z-index: -1;"> </canvas>
+
     <div class="container">
 
         <div>
@@ -38,6 +43,7 @@
                             <a href="../pages/cores.html">Formas de representação de cores</a>
                             <a href="../pages/fontes.html">Tipos de fontes</a>
                             <a href="../pages/bordas.html">Tipos de bordas</a>
+                            <a href="../pages/boxmodel.html">Box model</a>
                         </div>
                     </li>
                 </ul>
@@ -128,7 +134,7 @@ p.mix {border-style: dotted dashed solid double;}
                             </code></pre>
                     </div>
 
-                    
+
                     <div class="col example">
 
                         <p>Resultado:</p>
@@ -534,7 +540,8 @@ p.bottom-short {
 
                     <h2>Bordas arredondadas</h2>
 
-                    <p>A <strong>border-radius</strong> propriedade é usada para adicionar bordas arredondadas a um elemento:</p>
+                    <p>A <strong>border-radius</strong> propriedade é usada para adicionar bordas arredondadas a um
+                        elemento:</p>
 
                     <div class="col example">
                         <p>Exemplo:</p>
@@ -573,8 +580,103 @@ p.round3 {
                         <p class="round">Borda redonda</p>
                         <p class="rounder">Borda arredondada</p>
                         <p class="roundest">Borda mais redonda</p>
-                        
+
                     </div>
+
+                    <h2>Todas as propriedades de borda</h2>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th style="width:25%">Propriedade</th>
+                                <th>Descrição</th>
+                            </tr>
+                            <tr>
+                                <td>border</td>
+                                <td>Define todas as propriedades da borda em uma declaração</td>
+                            </tr>
+                            <tr>
+                                <td>border-bottom</td>
+                                <td>Define todas as propriedades da borda inferior em uma declaração</td>
+                            </tr>
+                            <tr>
+                                <td>border-bottom-color</td>
+                                <td>Define a cor da borda inferior</td>
+                            </tr>
+                            <tr>
+                                <td>border-bottom-style</td>
+                                <td>Define o estilo da borda inferior</td>
+                            </tr>
+                            <tr>
+                                <td>border-bottom-width</td>
+                                <td>Define a largura da borda inferior</td>
+                            </tr>
+                            <tr>
+                                <td>border-color</td>
+                                <td>Define a cor das quatro bordas</td>
+                            </tr>
+                            <tr>
+                                <td>border-left</td>
+                                <td>Define todas as propriedades da borda esquerda em uma declaração</td>
+                            </tr>
+                            <tr>
+                                <td>border-left-color</td>
+                                <td>Define a cor da borda esquerda</td>
+                            </tr>
+                            <tr>
+                                <td>border-left-style</td>
+                                <td>Define o estilo da borda esquerda</td>
+                            </tr>
+                            <tr>
+                                <td>border-left-width</td>
+                                <td>Define a largura da borda esquerda</td>
+                            </tr>
+                            <tr>
+                                <td>border-radius</td>
+                                <td>Define todas as quatro propriedades border-*-radius para cantos arredondados</td>
+                            </tr>
+                            <tr>
+                                <td>border-right</td>
+                                <td>Define todas as propriedades da borda direita em uma declaração</td>
+                            </tr>
+                            <tr>
+                                <td>border-right-color</td>
+                                <td>Define a cor da borda direita</td>
+                            </tr>
+                            <tr>
+                                <td>border-right-style</td>
+                                <td>Define o estilo da borda direita</td>
+                            </tr>
+                            <tr>
+                                <td>border-right-width</td>
+                                <td>Define a largura da borda direita</td>
+                            </tr>
+                            <tr>
+                                <td>border-style</td>
+                                <td>Define o estilo das quatro bordas</td>
+                            </tr>
+                            <tr>
+                                <td>border-top</td>
+                                <td>Define todas as propriedades da borda superior em uma declaração</td>
+                            </tr>
+                            <tr>
+                                <td>border-top-color</td>
+                                <td>Define a cor da borda superior</td>
+                            </tr>
+                            <tr>
+                                <td>border-top-style</td>
+                                <td>Define o estilo da borda superior</td>
+                            </tr>
+                            <tr>
+                                <td>border-top-width</td>
+                                <td>Define a largura da borda superior</td>
+                            </tr>
+                            <tr>
+                                <td>border-width</td>
+                                <td>Define a largura das quatro bordas</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </div>
             </section>

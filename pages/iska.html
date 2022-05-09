@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="../css/image.css">
     <link rel="stylesheet" href="../css/popup.css">
     <link rel="stylesheet" href="../css/mediaqueries.css">
+    <script src="../js/matrix.js"></script>
     <title>Iska</title>
 </head>
 
 <body>
-
+    <canvas width="800" height="800" id="canvas" style="position: fixed; z-index: -1;"> </canvas>
     <div class="container">
 
         <div>
@@ -63,8 +64,6 @@
 
                 <div class="grid-container">
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/psi.jpg" alt="PSICOLOGIA">
-                        <h3>25.000,00 KZS</h3>
                         <a href="#popup1">
                             <h3>PSICOLOGIA</h3>
                         </a>
@@ -72,9 +71,6 @@
                     </div>
 
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/cpri.jpg"
-                            alt="Ciência Política e Relações Internacionais ">
-                        <h3>25.000,00 KZS</h3>
                         <a href="#popup2">
                             <h3>Ciência Política e Relações Internacionais</h3>
                         </a>
@@ -82,80 +78,70 @@
                     </div>
 
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/gest.jpg" alt="Gestão">
-                        <h3>25.000,00 KZS</h3>
+                        
                         <a href="#popup3">
                             <h3>Gestão</h3>
                         </a>
                         <p>Gestão é uma área das ciências humanas que se dedica…</p>
                     </div>
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/dire.jpg" alt="ECONOMIA">
-                        <h3>25.000,00 KZS</h3>
+                        
                         <a href="#popup4">
                             <h3>ECONOMIA</h3>
                         </a>
                         <p>Economia é o conjunto de atividades desenvolvidas pelos homens visando…</p>
                     </div>
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/eng_tel.jpg" alt="Engenharia Telecomunicações">
-                        <h3>29.500,00 KZS</h3>
+                        
                         <a href="#popup5">
                             <h3>Engenharia Telecomunicações</h3>
                         </a>
                         <p>Engenharia é a capacidade de aplicar os conhecimentos científicos de…</p>
                     </div>
                     <div class="card">
-                        <img class="card-image" src="../img/m1.jpg" alt="Engenharia Informática">
-                        <h3>29.500,00 KZS</h3>
+                        
                         <a href="#popup12">
                             <h3>Engenharia Informática</h3>
                         </a>
                         <p>Engenharia é a capacidade de aplicar os conhecimentos científicos de…</p>
                     </div>
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/enfer.jpg" alt="ENFERMAGEM">
-                        <h3>29.500,00 KZS</h3>
+                        
                         <a href="#popup6">
                             <h3>ENFERMAGEM</h3>
                         </a>
                         <p>O curso de Enfermagem prepara o aluno para actuar de…</p>
                     </div>
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/fisio.jpg" alt="FISIOTERAPIA ">
-                        <h3>29.500,00 KZS</h3>
+                        
                         <a href="#popup7">
                             <h3>FISIOTERAPIA </h3>
                         </a>
                         <p>Fisioterapia é a ciência que estuda, diagnostica, previne e recupera…</p>
                     </div>
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/farm.jpg" alt="Ciências Farmacêuticas">
-                        <h3>29.500,00 KZS</h3>
+                        
                         <a href="#popup8">
                             <h3>Ciências Farmacêuticas</h3>
                         </a>
                         <p>O profissional formado em Ciências Farmacêuticas está habilitado a desenvolver…</p>
                     </div>
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/ac.jpg" alt="Análises Clínicas">
-                        <h3>29.500,00 KZS</h3>
+                        
                         <a href="#popup9">
                             <h3>Análises Clínicas</h3>
                         </a>
                         <p>O Curso de Análises Clínicas prepara o profissional para diagnosticar…</p>
                     </div>
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/pedag.jpg" alt="PEDAGOGIA">
-                        <h3>25.000,00 KZS</h3>
+
                         <a href="#popup10">
                             <h3>PEDAGOGIA</h3>
                         </a>
                         <p>A Pedagogia estuda os ideais de educação, segundo uma determinada…</p>
                     </div>
                     <div class="card">
-                        <img class="card-image" src="../img/cursos/socio.jpg" alt="SOCIOLOGIA">
-                        <h3>25.000,00 KZS</h3>
+                        
                         <a href="#popup11">
                             <h3>SOCIOLOGIA</h3>
                         </a>
@@ -173,6 +159,7 @@
                     <h2>Psicologia</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
+                        <img class="card-image" src="../img/cursos/psi.jpg" alt="PSICOLOGIA">
                         <strong>Preço do curso:</strong> 25.000,00 KZS AOA <br>
                         <strong>Duração:</strong> 4 Anos <br> <br>
                         <strong>Acerca do curso</strong>
@@ -225,7 +212,11 @@
                     <h2>Ciência Política e Relações Internacionais</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
-                        <strong>Preço do curso:</strong> AOA <br>
+
+                        <img class="card-image" src="../img/cursos/cpri.jpg"
+                            alt="Ciência Política e Relações Internacionais ">
+
+                        <strong>Preço do curso: 25.000,00</strong> AOA <br>
                         <strong>Duração:</strong> 4 Anos <br> <br>
                         <strong>Acerca do curso</strong>
                         <hr>
@@ -250,7 +241,10 @@
                     <h2>Gestão</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
-                        <strong>Preço do curso:</strong> AOA <br>
+
+                        <img class="card-image" src="../img/cursos/gest.jpg" alt="Gestão">
+
+                        <strong>Preço do curso: 25.000,00</strong> AOA <br>
                         <strong>Duração:</strong> 4 Anos <br> <br>
                         <strong>Acerca do curso</strong>
                         <hr>
@@ -276,6 +270,9 @@
                     <h2>Economia</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
+
+                        <img class="card-image" src="../img/cursos/dire.jpg" alt="ECONOMIA">
+
                         <strong>Preço do curso:</strong> 25.000,00 KZS AOA <br>
                         <strong>Duração:</strong> 4 Anos <br> <br>
                         <strong>Acerca do curso</strong>
@@ -299,7 +296,10 @@
                     <h2>Engenharia Telecomunicações</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
-                        <strong>Preço do curso:</strong> AOA <br>
+
+                        <img class="card-image" src="../img/cursos/eng_tel.jpg" alt="Engenharia Telecomunicações">
+
+                        <strong>Preço do curso: 29.500,00</strong> AOA <br>
                         <strong>Duração:</strong> 4 Anos <br> <br>
                         <strong>Acerca do curso</strong>
                         <hr>
@@ -321,7 +321,10 @@
                     <h2>Engenharia Informática</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
-                        <strong>Preço do curso:</strong> AOA <br>
+
+                        <img class="card-image" src="../img/m1.jpg" alt="Engenharia Informática">
+
+                        <strong>Preço do curso: 29.500,00</strong> AOA <br>
                         <strong>Duração:</strong> 4 Anos <br> <br>
                         <strong>Acerca do curso</strong>
                         <hr>
@@ -343,6 +346,9 @@
                     <h2>ENFERMAGEM</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
+
+                        <img class="card-image" src="../img/cursos/enfer.jpg" alt="ENFERMAGEM">
+
                         <strong>Preço do curso:</strong> 29.500,00 KZS AOA <br>
                         <strong>Duração:</strong> 5 Anos <br> <br>
                         <strong>Acerca do curso</strong>
@@ -369,6 +375,9 @@
                     <h2>FISIOTERAPIA</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
+
+                        <img class="card-image" src="../img/cursos/fisio.jpg" alt="FISIOTERAPIA ">
+
                         <strong>Preço do curso:</strong> 29.500,00 KZS AOA <br>
                         <strong>Duração:</strong> 5 Anos <br> <br>
                         <strong>Acerca do curso</strong>
@@ -390,7 +399,10 @@
                     <h2>Ciências Farmacêuticas</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
-                        <strong>Preço do curso:</strong> AOA <br>
+
+                        <img class="card-image" src="../img/cursos/farm.jpg" alt="Ciências Farmacêuticas">
+
+                        <strong>Preço do curso: 29.500,00</strong> AOA <br>
                         <strong>Duração:</strong> 5 Anos <br> <br>
                         <strong>Acerca do curso</strong>
                         <hr>
@@ -415,6 +427,9 @@
                     <h2>Análises Clínicas</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
+
+                        <img class="card-image" src="../img/cursos/ac.jpg" alt="Análises Clínicas">
+
                         <strong>Preço do curso:</strong> 29.500,00 KZS AOA <br>
                         <strong>Duração:</strong> 5 Anos <br> <br>
                         <strong>Acerca do curso</strong>
@@ -441,6 +456,9 @@
                     <h2>PEDAGOGIA</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
+
+                        <img class="card-image" src="../img/cursos/pedag.jpg" alt="PEDAGOGIA">
+
                         <strong>Preço do curso:</strong> 25.000,00 KZS AOA <br>
                         <strong>Duração:</strong> 4 Anos <br> <br>
                         <strong>Acerca do curso</strong>
@@ -468,6 +486,9 @@
                     <h2>SOCIOLOGIA</h2>
                     <a class="close" href="#close">&times;</a>
                     <div class="content">
+
+                        <img class="card-image" src="../img/cursos/socio.jpg" alt="SOCIOLOGIA">
+
                         <strong>Preço do curso:</strong> 25.000,00 KZS AOA <br>
                         <strong>Duração:</strong> 4 Anos <br> <br>
                         <strong>Acerca do curso</strong>
