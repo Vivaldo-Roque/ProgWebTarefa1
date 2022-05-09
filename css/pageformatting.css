@@ -70,7 +70,7 @@ body::after {
     padding: 10px 10px 10px 10px;
     padding-top: 5rem;
     /* Altura do cabecalho */
-    padding-bottom: 5rem;
+    padding-bottom: 6.5rem;
     /* Altura do rodape */
 }
 
@@ -103,7 +103,7 @@ footer {
     text-align: center;
     background-color: var(--grey);
     color: var(--white);
-    height: 5rem;
+    height: 6.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,9 +197,18 @@ hr {
     margin-bottom: 25px;
 }
 
+.m-y-2 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
 .m-y-0 {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.space-between{
+    align-content: space-between;
 }
 
 .text-color-green {

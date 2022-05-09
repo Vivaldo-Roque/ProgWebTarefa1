@@ -1,6 +1,7 @@
 /* Barra de navegacao */
 
-header ul {
+header ul,
+footer ul {
     display: flex;
     align-items: center;
     align-content: center;
@@ -13,12 +14,14 @@ header ul {
     /*background-color: var(--robin-egg-blues);*/
 }
 
-header ul li {
-    
+header ul li,
+footer ul li {
+
     width: 270px;
 }
 
-header ul li a {
+header ul li a,
+footer ul li a {
     display: block;
     color: var(--white);
     text-align: center;
@@ -33,32 +36,42 @@ header ul li a {
     font-family: Poppins;
 }
 
-header ul li a:hover:not(.active) {
+header ul li a:hover:not(.active),
+footer ul li a:hover:not(.active) {
     background-color: #111;
 }
 
-header ul li a.active {
+header ul li a.active,
+footer ul li a.active {
     transition: background-color 0.5s;
     background-color: var(--light-green);
 }
 
-header ul li a.active:hover {
+header ul li a.active:hover,
+footer ul li a.active:hover {
     background-color: var(--dark-green);
 }
 
-li div.dropdown-content {
+header ul li div.dropdown-content, footer ul li div.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     overflow: auto;
     max-height: 450px;
-  }
-  
- li div.dropdown-content a:hover {background-color: #f1f1f1;}
-  
- li.dropdown:hover div.dropdown-content {
+}
+
+footer ul li div.dropdown-content{
+    bottom: 93%;
+    left: 50%;
+}
+
+header ul li div.dropdown-content a:hover, footer ul li div.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+header ul li.dropdown:hover div.dropdown-content, footer ul li.dropdown:hover div.dropdown-content {
     display: block;
-  }
+}
