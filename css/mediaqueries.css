@@ -1,6 +1,8 @@
+/* For phone: */
+
 @media only screen and (max-width: 600px) {
 
-    /* For phone: */
+    
     table,
     th,
     td {
@@ -44,9 +46,10 @@
 
 }
 
+/* For tablets: */
 @media only screen and (min-width: 600px) {
 
-    /* For tablets: */
+    
     table,
     th,
     td {

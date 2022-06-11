@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/pageformatting.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/mediaqueries.css">
+    <title>Layout e Banner</title>
+
+    <script src="../js/topscroll.js"></script>
+
+    <!-- Para o amazingslider -->
+    <script src="../amazingslider/sliderengine/jquery.js"></script>
+    <script src="../amazingslider/sliderengine/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="../amazingslider/sliderengine/amazingslider-1.css">
+    <script src="../amazingslider/sliderengine/initslider-1.js"></script>
+    <!-- Para o amazingslider -->
+</head>
+
+<body>
+
+    <button id="myTopBtn" title="Ir para cima">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+            class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+        </svg>
+        cima
+    </button>
+
+    <!-- Insere na página web que deveja visualizar o slide -->
+    <div class="amazingslider-wrapper" id="amazingslider-wrapper-1"
+        style="display:block;position:relative;max-width:900px;margin:0px auto 52px;">
+        <div class="amazingslider" id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li><img src="../amazingslider/images/banner-cadastro-de-clientes.png" alt="cadastro alunos"
+                        title="cadastro alunos" />
+                </li>
+                <li><img src="../amazingslider/images/cadastro-casa-verde-amarela.jpg" alt="cadastro alunos"
+                        title="cadastro alunos" />
+                </li>
+                <li><img src="../amazingslider/images/cadastro-de-clientes-3-1024x512.jpg" alt="cadastro alunos"
+                        title="cadastro alunos" />
+                </li>
+            </ul>
+            <ul class="amazingslider-thumbnails" style="display:none;">
+                <li><img src="../amazingslider/images/banner-cadastro-de-clientes-tn.png" alt="cadastro alunos"
+                        title="cadastro alunos" /></li>
+                <li><img src="../amazingslider/images/cadastro-casa-verde-amarela-tn.jpg" alt="cadastro alunos"
+                        title="cadastro alunos" /></li>
+                <li><img src="../amazingslider/images/cadastro-de-clientes-3-1024x512-tn.jpg" alt="cadastro alunos"
+                        title="cadastro alunos" /></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Insere na página web que deveja visualizar o slide -->
+
+    <div class="container">
+
+        <div>
+            <header>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#dropdown"> Tarefas &#11206;</a>
+                        <div class="dropdown-content">
+                            <a href="../index.html">Autobiografia</a>
+                            <a href="../pages/eng-info.html">Engenharia informática</a>
+                            <a href="../pages/ens-super.html">Universidades e Institutos Superiores</a>
+                            <a href="../pages/descon.html">Tags e atributos descontinuados</a>
+                            <a href="../pages/novas-tags.html">Novas Tags e atributos</a>
+                            <a href="../pages/vid-mus.html">Video e Música</a>
+                            <a href="../pages/web3web4.html">Web 3 e Web 4</a>
+                            <a href="../pages/portais.html">Portais</a>
+                            <a href="../pages/horario.html">Horário</a>
+                            <a href="../pages/seletores.html">Selectores</a>
+                            <a href="../pages/cores.html">Formas de representação de cores</a>
+                            <a href="../pages/fontes.html">Tipos de fontes</a>
+                            <a href="../pages/bordas.html">Tipos de bordas</a>
+                            <a href="../pages/boxmodel.html">Box model</a>
+                            <a href="../pages/pos.html">Posicionamento</a>
+                            <a href="../pages/medidas.html">Unidades de medidas</a>
+                            <a href="../pages/formaluno.html">Formulário aluno</a>
+                            <a href="../pages/two-col-layout.html">Layout 2 colunas</a>
+                            <a href="../pages/three-col-layout.html">Layout 3 colunas</a>
+                        </div>
+                    </li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="content-wrap">
+
+            <div class="grid-two-columns">
+
+                <div id="ads">
+
+                    <p>Publicidade</p>
+
+                    <img src="../img/ads/robotic.jpg" alt="Arotec campeonato nacional de robótica" height="auto" width="100%">
+
+                </div>
+
+                <div class="content-aligment">
+
+                    <section>
+                        <h1>Cadastro de aluno</h1>
+
+                        <form style="width: 100%; margin-bottom: 25px;">
+                            <div class="col">
+                                <!-- CADASTRO DE ALUNO-->
+                                <fieldset>
+                                    <legend>Dados pessoais</legend>
+                                    <table cellspacing="10">
+                                        <tr>
+                                            <td>
+                                                <label for="nome">Nome completo: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="nome">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="nomepai">Nome completo Pai: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="nomepai">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="nomemae">Nome completo Mãe: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="nomemae">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="nascimento">Data de nascimento: </label>
+                                            </td>
+                                            <td>
+                                                <input type="date" name="nascimento" value="2018-07-22" min="1573-01-01"
+                                                    max="9998-12-31">
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="bi">Nº bilhete de identidade: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="bi" size="20" maxlength="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="naturalidade">Naturalidade: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="naturalidade">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="sexo">Sexo:</label>
+                                            </td>
+                                            <td>
+                                                <select name="sexo">
+                                                    <option value="M">Masculino</option>
+                                                    <option value="F">Feminino</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+
+                                <!-- ENDEREÇO -->
+                                <fieldset>
+                                    <legend>Dados de Endereço</legend>
+                                    <table cellspacing="10">
+
+                                        <tr>
+                                            <td>
+                                                <label for="rua">Rua:</label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="rua">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="bairro">Bairro: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="bairro">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="provincia">Província:</label>
+                                            </td>
+                                            <td>
+                                                <select name="provincia">
+                                                    <option value="LUA">Luanda</option>
+                                                    <option value="BGU">Benguela</option>
+                                                    <option value="MAL">Malange</option>
+                                                    <option value="BGO">Bengo</option>
+                                                    <option value="BIE">Bié</option>
+                                                    <option value="CAB">Cabinda</option>
+                                                    <option value="CCU">Cuando Cubango</option>
+                                                    <option value="CNO">Cuanza Norte</option>
+                                                    <option value="CUS">Cuanza Sul</option>
+                                                    <option value="CNN">Cunene</option>
+                                                    <option value="HUA">Huambo</option>
+                                                    <option value="HUI">Huíla</option>
+                                                    <option value="LNO">Lunda Norte</option>
+                                                    <option value="LSU">Lunda Sul</option>
+                                                    <option value="MOX">Moxico</option>
+                                                    <option value="NAM">Namibe</option>
+                                                    <option value="UIG">Uíge</option>
+                                                    <option value="ZAI">Zaire</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="cidade">Cidade: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="cidade">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+
+                                <fieldset>
+                                    <legend>Dados de login</legend>
+                                    <table cellspacing="10">
+                                        <tr>
+                                            <td>
+                                                <label for="email">E-mail: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="email">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="imagem">Imagem de perfil:</label>
+                                            </td>
+                                            <td>
+                                                <input type="file" name="imagem">
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="utilizador">Utilizador: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="utilizador">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="pass">Senha: </label>
+                                            </td>
+                                            <td>
+                                                <input type="password" name="pass">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="passconfirm">Confirme a senha: </label>
+                                            </td>
+                                            <td>
+                                                <input type="password" name="passconfirm">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+
+                                <!-- DADOS DE LOGIN -->
+                                <input type="submit" value="Confirmar dados">
+                                <input type="reset" value="Limpar">
+                            </div>
+                        </form>
+
+                    </section>
+                </div>
+                
+            </div>
+
+        </div>
+        <div>
+            <footer>
+                <div class="row">
+                    <div class="col">
+                        <a href="../pages/biblio.html">Autobiografia</a>
+                        <a href="../pages/eng-info.html">Engenharia informática</a>
+                        <a href="../pages/ens-super.html">Universidades e Institutos Superiores</a>
+                    </div>
+                    <div class="col">
+                        <a href="../pages/descon.html">Tags e atributos descontinuados</a>
+                        <a href="../pages/novas-tags.html">Novas Tags e atributos</a>
+                        <a href="../pages/vid-mus.html">Video e Música</a>
+                    </div>
+                    <div class="col">
+                        <a href="../pages/web3web4.html">Web 3 e Web 4</a>
+                        <a href="../pages/portais.html">Portais</a>
+                        <a href="../pages/horario.html">Horário</a>
+                    </div>
+                    <div class="col">
+                        <a href="../pages/seletores.html">Selectores</a>
+                        <a href="../pages/cores.html">Formas de representação de cores</a>
+                        <a href="../pages/fontes.html">Tipos de fontes</a>
+                    </div>
+                    <div class="col">
+                        <a href="../pages/bordas.html">Tipos de bordas</a>
+                        <a href="../pages/boxmodel.html">Box model</a>
+                        <a href="#">Posicionamento</a>
+                    </div>
+                    <div class="col">
+                        <a href="#">Unidades de medidas</a>
+                        <a href="../pages/formaluno.html">Formulário aluno</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+.relative-parent {
+    width: 500px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #156236;
+ }
+ 
+ .relative {
+    border: 10px double red;
+    box-shadow: 3px 3px;
+    background: #af8542;
+    height: 100px;
+    width: 300px;
+    position: relative;
+    top: 20px;
+    left: 45px;
+ }
+
+ .absolute {
+     border: 10px double red;
+     box-shadow: 3px 3px;
+    background: #c590f5;
+    height: 100px;
+    width: 250px;
+    position: absolute;
+    top: 450px;
+    right: 100px;
+   }
+
+   .fixed {
+    border: 10px double red;
+    box-shadow: 3px 3px;
+    background: #a4c467;
+    height: 50px;
+    width: 300px;
+    position: fixed;
+    bottom: 100px;
+    right: 32px;
+   }

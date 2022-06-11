@@ -12,13 +12,55 @@
     <link rel="stylesheet" href="../css/table.css">
     <link rel="stylesheet" href="../css/mediaqueries.css">
     <link rel="stylesheet" href="../css/prism.css">
-    <script src="../js/matrix.js"></script>
+
+    <!-- Para o amazingslider -->
+    <script src="../amazingslider/sliderengine/jquery.js"></script>
+    <script src="../amazingslider/sliderengine/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="../amazingslider/sliderengine/amazingslider-1.css">
+    <script src="../amazingslider/sliderengine/initslider-1.js"></script>
+    <!-- Para o amazingslider -->
+
+    <script src="../js/topscroll.js"></script>
     <title>Selectores CSS</title>
 </head>
 
 <body>
 
-    <canvas width="800" height="800" id="canvas" style="position: fixed; z-index: -1;"> </canvas>
+    <button id="myTopBtn" title="Ir para cima">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+            class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+        </svg>
+        cima
+    </button>
+
+    <!-- Insere na página web que deveja visualizar o slide -->
+    <div class="amazingslider-wrapper" id="amazingslider-wrapper-1"
+        style="display:block;position:relative;max-width:900px;margin:0px auto 52px;">
+        <div class="amazingslider" id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li><img src="../amazingslider/images/banner-cadastro-de-clientes.png" alt="cadastro alunos"
+                        title="cadastro alunos" />
+                </li>
+                <li><img src="../amazingslider/images/cadastro-casa-verde-amarela.jpg" alt="cadastro alunos"
+                        title="cadastro alunos" />
+                </li>
+                <li><img src="../amazingslider/images/cadastro-de-clientes-3-1024x512.jpg" alt="cadastro alunos"
+                        title="cadastro alunos" />
+                </li>
+            </ul>
+            <ul class="amazingslider-thumbnails" style="display:none;">
+                <li><img src="../amazingslider/images/banner-cadastro-de-clientes-tn.png" alt="cadastro alunos"
+                        title="cadastro alunos" /></li>
+                <li><img src="../amazingslider/images/cadastro-casa-verde-amarela-tn.jpg" alt="cadastro alunos"
+                        title="cadastro alunos" /></li>
+                <li><img src="../amazingslider/images/cadastro-de-clientes-3-1024x512-tn.jpg" alt="cadastro alunos"
+                        title="cadastro alunos" /></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Insere na página web que deveja visualizar o slide -->
 
     <div class="container">
 
@@ -29,7 +71,7 @@
                     <li class="dropdown">
                         <a href="#dropdown"> Tarefas &#11206;</a>
                         <div class="dropdown-content">
-                            <a href="../pages/biblio.html">Autobiografia</a>
+                            <a href="../index.html">Autobiografia</a>
                             <a href="../pages/eng-info.html">Engenharia informática</a>
                             <a href="../pages/ens-super.html">Universidades e Institutos Superiores</a>
                             <a href="../pages/descon.html">Tags e atributos descontinuados</a>
@@ -38,11 +80,16 @@
                             <a href="../pages/web3web4.html">Web 3 e Web 4</a>
                             <a href="../pages/portais.html">Portais</a>
                             <a href="../pages/horario.html">Horário</a>
-                            <a href="../pages/seletores.html">Seletores CSS</a>
+                            <a href="../pages/seletores.html">Selectores</a>
                             <a href="../pages/cores.html">Formas de representação de cores</a>
                             <a href="../pages/fontes.html">Tipos de fontes</a>
                             <a href="../pages/bordas.html">Tipos de bordas</a>
                             <a href="../pages/boxmodel.html">Box model</a>
+                            <a href="../pages/pos.html">Posicionamento</a>
+                            <a href="../pages/medidas.html">Unidades de medidas</a>
+                            <a href="../pages/formaluno.html">Formulário aluno</a>
+                            <a href="../pages/two-col-layout.html">Layout 2 colunas</a>
+                            <a href="../pages/three-col-layout.html">Layout 3 colunas</a>
                         </div>
                     </li>
                 </ul>
@@ -51,7 +98,17 @@
 
         <div class="content-wrap">
 
-            <!-- Start section 1 -->
+            <div class="grid-two-columns">
+
+                <div id="ads">
+
+                    <p>Publicidade</p>
+
+                    <img src="../img/ads/robotic.jpg" alt="Arotec campeonato nacional de robótica" height="auto" width="100%">
+
+                </div>
+
+                <!-- Start section 1 -->
             <section>
                 <div class="content-aligment">
 
@@ -576,17 +633,20 @@ input[type="button"] {
                             <tr>
                                 <td>[<i>atributo</i>^=<i>valor</i>]</td>
                                 <td>a[href^="https"]</td>
-                                <td>Seleciona cada elemento &lt;a&gt; cujo valor de atributo href começa com "https"</td>
+                                <td>Seleciona cada elemento &lt;a&gt; cujo valor de atributo href começa com "https"
+                                </td>
                             </tr>
                             <tr>
                                 <td>[<i>atributo</i>$=<i>valor</i>]</td>
                                 <td>a[href$=".pdf"]</td>
-                                <td>Seleciona cada elemento &lt;a&gt; cujo valor de atributo href termina com ".pdf"</td>
+                                <td>Seleciona cada elemento &lt;a&gt; cujo valor de atributo href termina com ".pdf"
+                                </td>
                             </tr>
                             <tr>
                                 <td>[<i>atributo</i>*=<i>valor</i>]</td>
                                 <td>a[href*="w3schools"]</td>
-                                <td>Seleciona cada elemento &lt;a&gt; cujo valor de atributo href contém a substring "w3escolas"</td>
+                                <td>Seleciona cada elemento &lt;a&gt; cujo valor de atributo href contém a substring
+                                    "w3escolas"</td>
                             </tr>
                         </tbody>
                     </table>
@@ -836,7 +896,8 @@ q:lang(no) {
                             <tr>
                                 <td>:first-of-type</td>
                                 <td>p:first-of-type</td>
-                                <td>Seleciona todos os elementos &lt;p&gt; que é o primeiro elemento &lt;p&gt; de seu pai
+                                <td>Seleciona todos os elementos &lt;p&gt; que é o primeiro elemento &lt;p&gt; de seu
+                                    pai
                                 </td>
                             </tr>
                             <tr>
@@ -919,7 +980,7 @@ q:lang(no) {
                             <tr>
                                 <td>:only-child</td>
                                 <td>p:only-child</td>
-                                <td>Seleciona cada  elemento &lt;p&gt; que é o único filho de seu pai</td>
+                                <td>Seleciona cada elemento &lt;p&gt; que é o único filho de seu pai</td>
                             </tr>
                             <tr>
                                 <td>:optional</td>
@@ -929,13 +990,15 @@ q:lang(no) {
                             <tr>
                                 <td>:out-of-range</td>
                                 <td>input:out-of-range</td>
-                                <td>Seleciona todos os elementos &lt;entrada&gt; com um valor fora de um intervalo especificado
+                                <td>Seleciona todos os elementos &lt;entrada&gt; com um valor fora de um intervalo
+                                    especificado
                                 </td>
                             </tr>
                             <tr>
                                 <td>:read-only</td>
                                 <td>input:read-only</td>
-                                <td>Seleciona todos os elementos &lt;entrada&gt; com um atributo "readonly" especificado</td>
+                                <td>Seleciona todos os elementos &lt;entrada&gt; com um atributo "readonly" especificado
+                                </td>
                             </tr>
                             <tr>
                                 <td>:read-write</td>
@@ -945,7 +1008,8 @@ q:lang(no) {
                             <tr>
                                 <td>:required</td>
                                 <td>input:required</td>
-                                <td>Seleciona todos os elementos &lt;entrada&gt; com um atributo "obrigatório" especificado</td>
+                                <td>Seleciona todos os elementos &lt;entrada&gt; com um atributo "obrigatório"
+                                    especificado</td>
                             </tr>
                             <tr>
                                 <td>:root</td>
@@ -1253,40 +1317,43 @@ h1::after {
                 </div>
             </section>
             <!-- End Section 1 -->
+                
+            </div> 
 
         </div>
         <div>
             <footer>
-
-                <div class="col space-between">
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li class="dropdown">
-                            <a href="#dropdown"> Tarefas &#11205;</a>
-                            <div class="dropdown-content">
-                                <a href="../pages/biblio.html">Autobiografia</a>
-                                <a href="../pages/eng-info.html">Engenharia informática</a>
-                                <a href="../pages/ens-super.html">Universidades e Institutos Superiores</a>
-                                <a href="../pages/descon.html">Tags e atributos descontinuados</a>
-                                <a href="../pages/novas-tags.html">Novas Tags e atributos</a>
-                                <a href="../pages/vid-mus.html">Video e Música</a>
-                                <a href="../pages/web3web4.html">Web 3 e Web 4</a>
-                                <a href="../pages/portais.html">Portais</a>
-                                <a href="../pages/horario.html">Horário</a>
-                                <a href="../pages/seletores.html">Selectores</a>
-                                <a href="../pages/cores.html">Formas de representação de cores</a>
-                                <a href="../pages/fontes.html">Tipos de fontes</a>
-                                <a href="../pages/bordas.html">Tipos de bordas</a>
-                                <a href="../pages/boxmodel.html">Box model</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="m-y-2"></div>
-                    <p>
-                        Autor: Vivaldo Roque
-                    </p>
+                <div class="row">
+                    <div class="col">
+                        <a href="../pages/biblio.html">Autobiografia</a>
+                        <a href="../pages/eng-info.html">Engenharia informática</a>
+                        <a href="../pages/ens-super.html">Universidades e Institutos Superiores</a>
+                    </div>
+                    <div class="col">
+                        <a href="../pages/descon.html">Tags e atributos descontinuados</a>
+                        <a href="../pages/novas-tags.html">Novas Tags e atributos</a>
+                        <a href="../pages/vid-mus.html">Video e Música</a>
+                    </div>
+                    <div class="col">
+                        <a href="../pages/web3web4.html">Web 3 e Web 4</a>
+                        <a href="../pages/portais.html">Portais</a>
+                        <a href="../pages/horario.html">Horário</a>
+                    </div>
+                    <div class="col">
+                        <a href="../pages/seletores.html">Selectores</a>
+                        <a href="../pages/cores.html">Formas de representação de cores</a>
+                        <a href="../pages/fontes.html">Tipos de fontes</a>
+                    </div>
+                    <div class="col">
+                        <a href="../pages/bordas.html">Tipos de bordas</a>
+                        <a href="../pages/boxmodel.html">Box model</a>
+                        <a href="#">Posicionamento</a>
+                    </div>
+                    <div class="col">
+                        <a href="#">Unidades de medidas</a>
+                        <a href="../pages/formaluno.html">Formulário aluno</a>
+                    </div>
                 </div>
-
             </footer>
         </div>
     </div>

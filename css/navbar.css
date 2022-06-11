@@ -69,7 +69,9 @@ footer ul li div.dropdown-content{
 }
 
 header ul li div.dropdown-content a:hover, footer ul li div.dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: var(--white);
+    color: var(--black);
+
 }
 
 header ul li.dropdown:hover div.dropdown-content, footer ul li.dropdown:hover div.dropdown-content {

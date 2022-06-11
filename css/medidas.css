@@ -1,0 +1,24 @@
+table, th, td {
+    font-family: Verdana, Georgia;
+    border: 2px dashed white;
+    font-weight: normal;
+    line-height: 0.8;
+    letter-spacing: 5px;
+    
+}
+
+th, td {
+    text-indent: 20px;
+}
+
+table {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+tbody tr th {
+    word-spacing: 5px;
+}
