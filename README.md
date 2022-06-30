@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="#-descrição-do-projeto">Descrição</a> •
-  <a href="#-demonstração">Descrição</a> •
+  <a href="#-demonstração">Demonstração</a> •
   <a href="#-layout">Layout</a> • 
   <a href="#-acesso-ao-projeto">Como aceder ao projeto</a> • 
   <a href="#-tecnologias">Tecnologias</a> • 
