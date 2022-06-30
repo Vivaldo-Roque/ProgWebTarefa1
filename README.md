@@ -41,7 +41,7 @@ Essas tarefas são:
 - Fazer um Layout 2 colunas;
 - Fazer um Layout 3 colunas.
 
-## 🕹️ Demonstração
+## 🕹 Demonstração
 - <a href="https://vivaldo-roque.github.io/ProgWebTarefas/" target="_blank">ProgWebTarefas</a>
 
 ## 🎨 Layout
@@ -50,11 +50,12 @@ Essas tarefas são:
 ![Captura de Ecrã (2)](img/showcase/ex2.png)
 
 ## 📁 Acesso ao Projeto
-Você pode [acessar o código fonte do projeto inicial](/) ou [baixá-lo](https://github.com/Vivaldo-Roque/ProgWebTarefas/archive/refs/heads/master.zip).
+Você pode [acessar o código fonte do projeto](https://github.com/Vivaldo-Roque/ProgWebTarefas) ou [baixá-lo](https://github.com/Vivaldo-Roque/ProgWebTarefas/archive/refs/heads/master.zip).
 
 ### 🎲 Abrir e rodar
 Antes de começar, você vai precisar ter instalado em sua máquina a seguinte ferramenta:
 - [VSCode](https://code.visualstudio.com/).
+
 Após instalar o VsCode vais precisar da seguinte extensão para o mesmo:
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
