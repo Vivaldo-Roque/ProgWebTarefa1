@@ -316,3 +316,7 @@ button>svg {
     color: var(--black);
     text-indent: 0;
 }
+
+.text-no-ident {
+    text-indent: 0;
+}
